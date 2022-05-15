@@ -7,7 +7,7 @@ export default function Main() {
   return (
     <div className="custom-banner text-white">
       <Header />
-      <div className="lg:container flex flex-col lg:flex-row mx-auto pt-32 -mb-3 px-6 sm:px-10 lg:pt-[280px] lg:pb-[250px] px-10">
+      <div className="lg:container flex flex-col lg:flex-row mx-auto pt-32 -mb-3 px-6 sm:px-10 lg:pt-[280px] lg:pb-[80px] px-10">
         <div className="lg:w-[52.544%] md:pr-40 lg:pr-16 lg:pb-0">
           <div className="mb-5 flex items-center">
             <span className={`w-3 h-3 main_bg rounded-full`} />
@@ -35,7 +35,7 @@ export default function Main() {
           ))}
         </div>
         <div className="lg:w-[47.456%]">
-          <Video />
+          <Video additionalStyles />
         </div>
       </div>
     </div>
