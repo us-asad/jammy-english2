@@ -2,10 +2,10 @@ import Image from "next/image";
 import data from "data/main.json";
 
 export default function Logo({ showNavbar, switchNavbarShow }) {
-  const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 bg-white ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"}`;
+  const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 main_bg ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"}`;
 
   return (
-    <div className="flex md:block w-full justify-between px-10">
+    <div className="flex md:block w-full justify-between px-5 md:px-0">
       <div className="relative w-[96px] h-5">
         <Image
           src={data.logo.src}

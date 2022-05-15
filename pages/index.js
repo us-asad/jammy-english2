@@ -10,6 +10,7 @@ export default function Home() {
         <title>Working Well</title> 
       </Head>
       <Main />
+      <div className="h-screen" />
     </div>
   );
 }

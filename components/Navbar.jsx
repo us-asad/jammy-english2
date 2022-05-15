@@ -12,7 +12,7 @@ export default function Navbar({ showNavbar }) {
 
   return (
     <nav className="w-full bg-white md:bg-transparent text-black md:text-white mt-5 md:mt-0">
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex justify-end">
         {data.nav_items.map(item => (
           <li
             key={item.slug}
@@ -55,7 +55,7 @@ export default function Navbar({ showNavbar }) {
           </li>
         ))}
       </ul>
-      <ul className={`flex md:hidden flex-col justify-evenly text-[18px] mt-3 mx-2 ${!showNavbar ? "hidden" : ""}`}>
+      <ul className={`flex md:hidden justify-end flex-col justify-evenly text-[18px] mt-3 mx-2 ${!showNavbar ? "hidden" : ""}`}>
         {data.nav_items.map(item => (
           <li
             key={item.slug}
@@ -64,7 +64,7 @@ export default function Navbar({ showNavbar }) {
             {item.dropdown ? (
               <>
                 <p
-                  className="flex"
+                  className="flex cursor-pointer"
                   onClick={switchShowDD(!showDropDown)}
                 >
                   <span className={`text-[27px] customTransition ${showDropDown ? "rotate-180" : ""}`}>

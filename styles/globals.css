@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Rubik:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -59,4 +59,20 @@ body {
 
 .font-rubik {
   font-family: "Rubik", sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.main_bg {
+  background: #f7b500;
+}
+
+.main_bg_hover:hover {
+  background: #f7b500;
+}
+
+.main_color_hover:hover {
+  color: #f7b500; 
 }

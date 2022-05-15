@@ -56,17 +56,25 @@
       }
    ],
    "main_banner": {
-      "title": "Hello Welcome to Jammy English & Learn English!",
-      "subtitle": "Lorem ipsum dolor sit amet, eum cu corrumpit referrentur, id suas essent luptatum qui. Ea perfecto constituto eam, cum oblique conclusionemque an. Nominavi mandamus ut eum. In incorrupte intellegam quo, ius cu graece efficiendi.",
+      "small_title": "ON-DEMAND COURSE",
+      "title": "Complete Python Masterclass for Web Development",
+      "subtitle": "Amet facilisi phasellus lacus, sit massa, erat placerat aenean aliquet ultrices eleifend enim enim lacus elit.",
       "buttons": [
          {
-            "name": "Courses",
-            "url": "/courses"
+            "type": "non-bare",
+            "name": "Start Course",
+            "link": "/#"
          },
          {
-            "name": "Donate",
-            "url": "/donate"
+            "type": "bare",
+            "name": "View All Courses",
+            "link": "/##"
          }
-      ]
-   }
+      ],
+      "video": {
+         "link": "/introduction.mp4",
+         "alt": "Introduction Video"
+      }
+   },
+   "main_color": "#f7b500"
 }
