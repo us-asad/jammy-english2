@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+.customTransition {
+	-webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.link-underline, .link-underline-black {
+  border-bottom-width: 0;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out;
+}
+
+.link-underline {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 0 2px;
+  background-position: 0 100%;
+}
+
+.link-underline:hover {
+  background-size: 100% 2px;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000);
+  background-position: 50% 100%;
+}
+
+.link-underline-black:hover {
+  background-size: 70% 2px;
+}
+
+
+.link-underlined {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  transition: background-size .5s ease-in-out;
+}
+
+.custom-banner {
+  background-color: #fff;
+  background-image: url("/banner.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.font-rubik {
+  font-family: "Rubik", sans-serif;
+}
