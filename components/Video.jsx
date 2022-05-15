@@ -18,6 +18,7 @@ export default function Video() {
   }
 
   useEffect(() => {
+    setVideoSize({height: videoRef.current.offsetHeight, width: videoRef.current.offsetWidth})
     if (typeof window !== "undefined") {
       window.addEventListener('resize', () => {
         setVideoSize({height: videoRef.current.offsetHeight, width: videoRef.current.offsetWidth})
