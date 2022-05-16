@@ -54,11 +54,23 @@ body {
 }
 
 .custom-banner {
-  background-color: #fff;
   background-image: url("/banner.svg");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.section-banner {
+  background-image: url("/section-bg.svg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dots-bg {
+  background-image: url("/dots-bg.png");
+  background-position: top 18px right 34px;
+  background-repeat: no-repeat;
 }
 
 .font-rubik {
@@ -77,6 +89,71 @@ body {
   background: #f7b500;
 }
 
+.main_color {
+  color: #f7b500;
+}
+
 .main_color_hover:hover {
   color: #f7b500; 
+}
+
+/*.carousel {
+  display: flex !important;
+}*/
+
+.customCarouselForRecentPosts .react-multi-carousel-item {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.custonLineClamp1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.custonLineClamp4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical; 
+}
+
+@media (min-width: 425px) {
+  .dots-bg {
+    background-position: top 133px right 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  .customCarouselSpaceXStyle .react-multi-carousel-track {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .dots-bg {
+    background-position: top 96px right 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .customCarouselForRecentPosts .react-multi-carousel-item {
+    flex: inherit !important;
+    width: auto !important;
+  }
+
+  .customCarouselForRecentPosts .react-multi-carousel-list {
+    justify-content: center;
+  }
+
+  .customCarouselForRecentPosts .react-multi-carousel-track {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

@@ -4,3 +4,5 @@ export { default as Navbar } from "./Navbar.jsx";
 export { default as Logo } from "./Logo.jsx";
 export { default as Video } from "./Video.jsx";
 export { default as About } from "./About.jsx";
+export { default as TopCourses } from "./TopCourses.jsx";
+export { default as TopCourseCard } from "./TopCourseCard.jsx";

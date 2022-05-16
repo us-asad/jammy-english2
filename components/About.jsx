@@ -4,7 +4,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 export default function About() {
   return (
-    <section id="about" className="lg:container mx-auto px-5 sm:px-8 md:px-10 lg:px-24 py-24 lg:py-16 text-center">
+    <section id="about" className="lg:container mx-auto px-5 sm:px-8 md:px-10 lg:px-24 pt-24 lg:pt-16 text-center">
       <h2 className="mb-5 text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins">
         {data.title}
       </h2>
