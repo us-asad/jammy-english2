@@ -116,6 +116,10 @@ body {
   -webkit-box-orient: vertical; 
 }
 
+.contact_shadow {
+  box-shadow: -32px 0 120px -32px rgb(0 0 0 / 16%);
+}
+
 @media (min-width: 769px) {
   .customCarouselSpaceXStyle .react-multi-carousel-track {
     width: 100%;

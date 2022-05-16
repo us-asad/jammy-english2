@@ -1,0 +1,61 @@
+{
+   "title": "Contact Us",
+   "contact_details": [
+      {
+         "icon": "phone",
+         "title": "Call Us",
+         "data": "+1 123 456 78 90"
+      },
+      {
+         "icon": "email",
+         "title": "Email Us",
+         "data": "info@jammyenglish.com"
+      }
+   ],
+   "social_icons_title": "Follow us",
+   "social_icons": [
+      {
+         "icon": "facebook",
+         "link": "/#facebook"
+      },
+      {
+         "icon": "twitter",
+         "link": "/#twitter"
+      },
+      {
+         "icon": "instagram",
+         "link": "/#instagram"
+      },
+      {
+         "icon": "youtube",
+         "link": "/#youtube"
+      }
+   ],
+   "message": {
+      "forms": [
+         {
+            "name": "Name",
+            "type": "text",
+            "validation_text": "Please, name should contain at least 3 characters"
+         },
+         {
+            "name": "Email",
+            "type": "email",
+            "validation_text": "Please enter a valid email address."
+         },
+         {
+            "name": "Subject",
+            "type": "text",
+            "validation_text": "Please, subject should contain at least 3 characters"
+         },
+         {
+            "name": "Message",
+            "type": "textarea",
+            "validation_text": "Please, message should contain at least 3 characters"
+         }
+      ],
+      "button_name": "Send Message",
+      "success_text": "Thanks for contacting us! We will be in touch with you shortly.",
+      "fail_text": "Please try again later, message has not been sent"
+   }
+}
