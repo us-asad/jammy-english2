@@ -15,19 +15,19 @@
    "social_icons_title": "Follow us",
    "social_icons": [
       {
-         "icon": "facebook",
+         "name": "facebook",
          "link": "/#facebook"
       },
       {
-         "icon": "twitter",
+         "name": "twitter",
          "link": "/#twitter"
       },
       {
-         "icon": "instagram",
+         "name": "instagram",
          "link": "/#instagram"
       },
       {
-         "icon": "youtube",
+         "name": "youtube",
          "link": "/#youtube"
       }
    ],
