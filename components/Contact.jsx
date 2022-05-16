@@ -26,7 +26,7 @@ export default function Contact() {
           className="flex w-full absolute top-[100px] md:top-[140px] left-0 px-6 md:px-10 xl:px-28"
           ref={containerRef}
         >
-          <div className="flex flex-col lg:flex-row w-full h-96 rounded-b-lg lg:rounded-b-[26px] bg-white">
+          <div className="flex flex-col lg:flex-row w-full rounded-b-lg lg:rounded-b-[26px] bg-white">
             <div className="lg:w-1/2">
               <ContactDetails />
             </div>

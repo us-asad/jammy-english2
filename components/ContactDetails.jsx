@@ -1,7 +1,47 @@
+import data from "data/contact.json";
+import { FaPhone } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { Facebook, Instagram, Twitter, Youtube } from "components/Svgs";
+
 export default function ContactDetails() {
   return (
     <div className="px-6 py-10 md:p-14 md:pr-16">
-      ContactDetails
+      {data.contact_details.map(item => (
+        <div className="mb-10 md:mb-5 pb-5 border-b-[1px] border-black flex flex-col sm:flex-row">
+          <div className="flex justify-center items-center w-[52px] h-[52px] border-2 mb-2 sm:mb-0 sm:mr-4 text-[16px] border-[#1579e6] rounded-full text-[#1579e6]">
+            {item.icon === "phone" ? <FaPhone /> : <MdEmail />}
+          </div>
+          <div>
+            <span className="inline-block mb-2 font-poppins font-semibold text-[13px]">{item.title}</span>
+            <p className="font-rubik text-[16.416px] md:text-[18px] font-medium">{item.data}</p>
+          </div>
+        </div>
+      ))}
+      <h4 className="mb-5 font-poppins font-semibold text-[13px] text-center md:text-left">
+        {data.social_icons_title}
+      </h4>
+      <div className="flex space-x-4 md:space-x-3 justify-center md:justify-start">
+        {data.social_icons.map(icon => (
+          <a
+            href={icon.link}
+            rel="noreferrer"
+            target="_blank"
+            className="hover:scale-105 hover:drop-shadow-lg customTransition"
+          >
+            {
+              icon.name.toLowerCase() === "facebook"
+              ? <Facebook />
+              : icon.name.toLowerCase() === "instagram"
+              ? <Instagram />
+              : icon.name.toLowerCase() === "twitter"
+              ? <Twitter />
+              : icon.name.toLowerCase() === "youtube"
+              ? <Youtube />
+              : ""
+            }
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
