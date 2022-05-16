@@ -69,7 +69,7 @@ body {
 
 .dots-bg {
   background-image: url("/dots-bg.png");
-  background-position: top 18px right 34px;
+  background-position: top 133px right 15px;
   background-repeat: no-repeat;
 }
 
@@ -97,10 +97,6 @@ body {
   color: #f7b500; 
 }
 
-/*.carousel {
-  display: flex !important;
-}*/
-
 .customCarouselForRecentPosts .react-multi-carousel-item {
     display: flex !important;
     justify-content: center !important;
@@ -120,12 +116,6 @@ body {
   -webkit-box-orient: vertical; 
 }
 
-@media (min-width: 425px) {
-  .dots-bg {
-    background-position: top 133px right 15px;
-  }
-}
-
 @media (min-width: 769px) {
   .customCarouselSpaceXStyle .react-multi-carousel-track {
     width: 100%;
@@ -134,10 +124,16 @@ body {
   }
 }
 
+@media (min-width: 600px) {
+  .dots-bg {
+    background-position: top 96px right 32px;
+  }
+}
+
 
 @media (min-width: 1024px) {
   .dots-bg {
-    background-position: top 96px right 32px;
+    background-position: top 18px right 34px;
   }
 }
 
