@@ -27,7 +27,7 @@ export default function Contact() {
           ref={containerRef}
         >
           <div className="flex flex-col lg:flex-row w-full rounded-b-lg lg:rounded-b-[26px] bg-white">
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2 flex justify-center items-center">
               <ContactDetails />
             </div>
             <div className="lg:w-1/2 contact_shadow">

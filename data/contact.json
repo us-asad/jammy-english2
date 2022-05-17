@@ -48,22 +48,39 @@
          {
             "name": "Name",
             "type": "text",
-            "validation_text": "Please, name should contain at least 3 characters"
+            "validate": {
+               "min": 3,
+               "max": 50,
+               "required": true
+            }
          },
          {
             "name": "Email",
             "type": "email",
-            "validation_text": "Please enter a valid email address."
+            "validate": {
+               "min": 3,
+               "max": 50,
+               "required": true,
+               "type_email": true
+            }
          },
          {
             "name": "Subject",
             "type": "text",
-            "validation_text": "Please, subject should contain at least 3 characters"
+            "validate": {
+               "min": 3,
+               "max": 50,
+               "required": true
+            }
          },
          {
             "name": "Message",
             "type": "textarea",
-            "validation_text": "Please, message should contain at least 3 characters"
+            "validate": {
+               "min": 3,
+               "max": 2000,
+               "required": true
+            }
          }
       ],
       "button_name": "Send Message",

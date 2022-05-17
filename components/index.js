@@ -9,3 +9,4 @@ export { default as TopCourseCard } from "./TopCourseCard.jsx";
 export { default as Contact } from "./Contact.jsx";
 export { default as ContactDetails } from "./ContactDetails.jsx";
 export { default as SendMessage } from "./SendMessage.jsx";
+export { default as FormInput } from "./FormInput.jsx";
