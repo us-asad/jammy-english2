@@ -2,6 +2,7 @@ import data from "data/contact.json";
 import Image from "next/image";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { SocialIcon } from "components";
 
 export default function ContactDetails() {
   return (
@@ -26,22 +27,7 @@ export default function ContactDetails() {
         {data.social_icons_title}
       </h4>
       <div className="flex space-x-4 md:space-x-3 justify-center md:justify-start">
-        {data.social_icons.map(icon => (
-          <a 
-            key={icon.link}
-            href={icon.link}
-            rel="noreferrer"
-            target="_blank"
-            className="hover:scale-105 hover:drop-shadow-lg focus:scale-95 customTransition"
-          >
-            <Image
-              src={icon.icon.link}
-              alt={icon.icon.alt}
-              width={45}
-              height={45}
-            />
-          </a>
-        ))}
+        {data.social_icons.map(icon => <SocialIcon key={icon.link} link={icon.link} icon={icon.icon} size={45} />)}
       </div>
     </div>
   );

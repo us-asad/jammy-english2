@@ -10,3 +10,5 @@ export { default as Contact } from "./Contact.jsx";
 export { default as ContactDetails } from "./ContactDetails.jsx";
 export { default as SendMessage } from "./SendMessage.jsx";
 export { default as FormInput } from "./FormInput.jsx";
+export { default as SocialIcon } from "./SocialIcon.jsx";
+export { default as Footer } from "./Footer.jsx";

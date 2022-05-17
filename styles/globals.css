@@ -74,7 +74,7 @@ body {
 
 .dots-bg {
   background-image: url("/dots-bg.png");
-  background-position: top 133px right 15px;
+  background-position: top 51px right -90px;
   background-repeat: no-repeat;
 }
 
@@ -125,6 +125,16 @@ body {
   box-shadow: 0px -20px 20px -23px rgb(2 2 2 / 26%);
 }
 
+.word-spacing-3 {
+  word-spacing: 3px;
+}
+
+@media (min-width: 600px) {
+  .dots-bg {
+    background-position: top 65px right 32px;
+  }
+}
+
 @media (min-width: 768px) {
   .customCarouselSpaceXStyle .react-multi-carousel-track {
     width: 100%;
@@ -136,13 +146,6 @@ body {
     box-shadow: 0px -20px 20px -23px rgb(0 0 0 / 34%);
   }
 }
-
-@media (min-width: 600px) {
-  .dots-bg {
-    background-position: top 96px right 32px;
-  }
-}
-
 
 @media (min-width: 1024px) {
   .dots-bg {

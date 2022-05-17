@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import data from "data/main.json";
-import { Main, About, TopCourses, Contact } from "components";
+import { Main, About, TopCourses, Contact, Footer } from "components";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <About />
       <TopCourses />
       <Contact />
-      <div className="h-screen bg-[#ddd]" />
+      <Footer />
     </div>
   );
 }

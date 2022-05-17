@@ -22,8 +22,8 @@ const arrowIcon = isRightArrow => (<span className={`absolute transition duratio
 export default function TopCourses() {
   return (
     <section id="top-courses" className="section-banner">
-      <div className="xl:container xl:mx-auto pt-40 dots-bg relative">
-        <p className="absolute top-[90px] left-[50px] xl:left-auto text-[20px] font-rubik font-medium after:w-[70%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">Top Courses</p>
+      <div className="xl:container xl:mx-auto pt-[130px] lg:pt-40 dots-bg relative">
+        <p className="absolute top-[60px] lg:top-[90px] left-[50px] xl:left-auto text-[20px] font-rubik font-medium after:w-[70%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">Top Courses</p>
         <div className="relative customCarouselForRecentPosts">
           <Carousel
             infinite

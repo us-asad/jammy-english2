@@ -20,8 +20,3 @@ export default function Contact() {
     </section>
   );
 }
-
-/*
-  <div style={{width: videoSize.width, height: videoSize.height}} />
-  <div className="flex w-full absolute top-[100px] md:top-[140px] left-0 px-6 md:px-10 xl:px-28">
-*/
