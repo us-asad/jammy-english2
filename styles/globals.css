@@ -19,19 +19,24 @@ body {
   transition: all .3s;
 }
 
-.link-underline, .link-underline-black {
+.link-underline, .link-underline-black, .link-underline-dark {
   border-bottom-width: 0;
   background-repeat: no-repeat;
   transition: background-size .5s ease-in-out;
 }
 
-.link-underline {
+.link-underline, .link-underline-dark {
   background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
   background-size: 0 2px;
   background-position: 0 100%;
 }
 
-.link-underline:hover {
+.link-underline-dark {
+  background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000);
+
+}
+
+.link-underline:hover, .link-underline-dark:hover {
   background-size: 100% 2px;
 }
 

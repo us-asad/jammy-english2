@@ -1,7 +1,10 @@
 import { useState } from "react";
 
-export default function FormInput({ name, type, validate }) {
+
+
+export default function FormInput({ name: n, type, validate }) {
   const [error, setError] = useState("");
+  const name = n.toLowerCase();
 
   const handleValidate = e => {
     const { value } = e.target;
@@ -20,29 +23,29 @@ export default function FormInput({ name, type, validate }) {
     }
   }
 
+  const fieldOptions = isTextArea => ({
+    name: name,
+    required: validate.required,
+    minLength: validate.min+1,
+    maxLength: validate.max-1,
+    onBlur: handleValidate,
+    className: `p-[12.312px] md:p-[13.5px] rounded-[2px] border-[#eaeaea] border-[1px] bg-[#fafafa] ${error ? "border-red-600" : "border-[#eaeaea]"} ${isTextArea && "h-[120px]"}`
+  });
+
   return (
     <div className="flex flex-col">
-      <label className="text-[18px] font-rubik font-bold text-[#576168]">
+      <label className="text-[16.416px] md:text-[18px] font-rubik font-bold text-[#576168]">
         {name}
         {validate.required && <span className="text-red-600 font-normal pl-[5px]">*</span>}
       </label>
       {
         type.toLowerCase() !== "textarea" ? (
-          <input
-            type={type}
-            name={name}
-            onBlur={handleValidate}
-            className={`p-[13.5px] rounded-[2px] border-[#eaeaea] border-[1px] bg-[#fafafa] ${error ? "border-red-600" : "border-[#eaeaea]"}`}
-          />
+          <input type={type} {...fieldOptions()} />
         ) : (
-          <textarea
-            name={name}
-            onBlur={handleValidate}
-            className={`p-[13.5px] rounded-[2px] border-[#eaeaea] border-[1px] bg-[#fafafa] h-[120px] ${error ? "border-red-600" : "border-[#eaeaea]"}`}
-          ></textarea>
+          <textarea {...fieldOptions()}></textarea>
         )
       }
-      {error && <span className="text-red-600 text-[16.2px] font-rubik font-normal">{error}</span>}
+      {error && <span className="text-red-600 text-[14.7744px] md:text-[16.2px] font-rubik font-normal">{error}</span>}
     </div>
   );
 }

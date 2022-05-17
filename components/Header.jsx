@@ -25,7 +25,7 @@ export default function Header() {
     <div className={`fixed top-0 left-0 z-[100] w-full pt-[30px] md:pt-0 md:mt-0 customTransition ${scrollY > 30 ? "bg-[#0355d0] drop-shadow-2xl" : ""}`}>
       <div className="lg:container mx-auto z-40 flex flex-col md:flex-row justify-between items-center md:h-[70px] md:px-10">
         <Logo showNavbar={showNavbar} switchNavbarShow={switchNavbarShow} />
-        <Navbar showNavbar={showNavbar} />
+        <Navbar showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
       </div>
       {showNavbar && <div onClick={switchNavbarShow} className="absolute z-[-1] top-0 left-0 w-screen h-[1000vh] bg-black opacity-70"></div>}
     </div>

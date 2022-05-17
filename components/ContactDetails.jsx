@@ -13,7 +13,12 @@ export default function ContactDetails() {
           </div>
           <div>
             <span className="inline-block mb-2 font-poppins font-semibold text-[13px]">{item.title}</span>
-            <p className="font-rubik text-[16.416px] md:text-[18px] font-medium">{item.data}</p>
+            <a
+              href={item.data_link}
+              rel="noreferrer"
+              target="_blank"
+              className="block font-rubik text-[16.416px] md:text-[18px] font-medium link-underline-dark"
+            >{item.data}</a>
           </div>
         </div>
       ))}
@@ -27,7 +32,7 @@ export default function ContactDetails() {
             href={icon.link}
             rel="noreferrer"
             target="_blank"
-            className="hover:scale-105 hover:drop-shadow-lg customTransition"
+            className="hover:scale-105 hover:drop-shadow-lg focus:scale-95 customTransition"
           >
             <Image
               src={icon.icon.link}

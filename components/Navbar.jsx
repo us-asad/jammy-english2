@@ -4,7 +4,7 @@ import Link from "next/link";
 import data from "data/main.json";
 import { MdOutlineKeyboardArrowDown  } from "react-icons/md";
 
-export default function Navbar({ showNavbar }) {
+export default function Navbar({ showNavbar, setShowNavbar }) {
   const [showDropDown, setShowDropDown] = useState(false);
   const router = useRouter();
 
@@ -79,7 +79,10 @@ export default function Navbar({ showNavbar }) {
                       className={`px-3 py-1.5 my-1 ${item.slug === router.route ? "bg-[#2131de] text-white rounded" : "border-b-[1px] last:border-b-0"}`}
                     >
                       <Link href={item.slug + dItem.slug}>
-                        <a className="block">{dItem.name}</a>
+                        <a
+                          className="block"
+                          onClick={() => setShowNavbar(false)}
+                        >{dItem.name}</a>
                       </Link>
                     </li>
                   ))}
@@ -87,7 +90,10 @@ export default function Navbar({ showNavbar }) {
               </>
             ) : (
               <Link href={item.slug}>
-                <a className="block">{item.name}</a>
+                <a
+                  className="block"
+                  onClick={() => setShowNavbar(false)}
+                >{item.name}</a>
               </Link>
             )}
           </li>

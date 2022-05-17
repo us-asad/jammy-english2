@@ -4,12 +4,14 @@
       {
          "icon": "phone",
          "title": "Call Us",
-         "data": "+1 123 456 78 90"
+         "data": "+1 123 456 78 90",
+         "data_link": "tel:+11234567890"
       },
       {
          "icon": "email",
          "title": "Email Us",
-         "data": "info@jammyenglish.com"
+         "data": "info@jammyenglish.com",
+         "data_link": "mailto:info@jammyenglish.com"
       }
    ],
    "social_icons_title": "Follow us",
@@ -83,7 +85,10 @@
             }
          }
       ],
-      "button_name": "Send Message",
+      "button": {
+         "name": "Send Message",
+         "loading_name": "Sending"
+      },
       "success_text": "Thanks for contacting us! We will be in touch with you shortly.",
       "fail_text": "Please try again later, message has not been sent"
    }
