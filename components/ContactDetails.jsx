@@ -2,7 +2,6 @@ import data from "data/contact.json";
 import Image from "next/image";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { Facebook, Instagram, Twitter, Youtube } from "components/Svgs";
 
 export default function ContactDetails() {
   return (
