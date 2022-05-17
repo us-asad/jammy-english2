@@ -15,19 +15,31 @@
    "social_icons_title": "Follow us",
    "social_icons": [
       {
-         "name": "facebook",
+         "icon": {
+            "link": "/social/facebook.svg",
+            "alt": "facebook"
+         },
          "link": "/#facebook"
       },
       {
-         "name": "twitter",
-         "link": "/#twitter"
-      },
-      {
-         "name": "instagram",
+         "icon": {
+            "link": "/social/instagram.svg",
+            "alt": "instagram"
+         },
          "link": "/#instagram"
       },
       {
-         "name": "youtube",
+         "icon": {
+            "link": "/social/telegram.svg",
+            "alt": "telegram"
+         },
+         "link": "/#twitter"
+      },
+      {
+         "icon": {
+            "link": "/social/youtube.svg",
+            "alt": "youtube"
+         },
          "link": "/#youtube"
       }
    ],
