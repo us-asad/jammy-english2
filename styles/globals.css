@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Rubik:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Rubik:wght@400;500&family=Smooch&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,7 +13,7 @@ body {
 }
 
 .customTransition {
-	-webkit-transition: all .3s;
+  -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
@@ -84,6 +84,10 @@ body {
 
 .font-poppins {
   font-family: "Poppins", sans-serif;
+}
+
+.font-smooch {
+  font-family: 'Smooch', cursive;
 }
 
 .main_bg {

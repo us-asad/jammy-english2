@@ -18,6 +18,13 @@
    "social_icons": [
       {
          "icon": {
+            "link": "/social/youtube.svg",
+            "alt": "youtube"
+         },
+         "link": "/#youtube"
+      },
+      {
+         "icon": {
             "link": "/social/facebook.svg",
             "alt": "facebook"
          },
@@ -36,13 +43,6 @@
             "alt": "telegram"
          },
          "link": "/#twitter"
-      },
-      {
-         "icon": {
-            "link": "/social/youtube.svg",
-            "alt": "youtube"
-         },
-         "link": "/#youtube"
       }
    ],
    "message": {

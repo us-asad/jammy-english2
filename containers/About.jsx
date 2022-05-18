@@ -9,7 +9,7 @@ export default function About() {
         <h2 className="mb-5 text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins">
           {data.title}
         </h2>
-        <p className="mb-[38px] lg:px-[120px] text-blue-500 text-[16.416px] leading-[30.4869px] md:text-[18px] font-rubik md:leading-[30px]">
+        <p className="font-smooch mb-[38px] lg:px-[120px] text-blue-500 text-[20px] leading-[30.4869px] md:text-[25px] font-rubik md:leading-[30px]">
           {data.subtitle}
         </p>
         <div className="drop-shadow-2xl">

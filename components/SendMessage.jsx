@@ -45,7 +45,7 @@ export default function SendMessage() {
           {result.error_text && <span className="block mt-3 text-[18px] font-medium text-red-500">{result.error_text}</span>}
         </form>
       ) : result.ok && (
-        <h3 className="text-center text-[22px] break-word font-rubik text-[#2db900]">
+        <h3 className="text-center text-[16px] sm:text-[22px] break-word font-rubik text-[#2db900]">
           Message has been sent successfully, we will reply soon&nbsp;
           {result.email && (
             <>

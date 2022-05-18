@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MdPlayLesson } from "react-icons/md";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Button } from "subcomponents";
 
 export default function TopCoursesCard({ image, name, lessons, button }) {
   return (
@@ -19,17 +20,12 @@ export default function TopCoursesCard({ image, name, lessons, button }) {
         <Link href={button.link}>
           <a className="text-[18px] font-poppins hover:text-blue-500 transition duration-200 custonLineClamp1">{name}</a>
         </Link>
-        <div className="flex mt-5">
-          <p className="flex items-center space-x-2 w-1/2 font-rubik text-[15px] text-[#576168]">
+        <div className="flex mt-5 flex-col justify-center items-center space-y-4 sm:flex-row sm:space-y-0">
+          <p className="flex items-center justify-center space-x-2 w-1/2 font-rubik text-[15px] text-[#576168]">
             <MdPlayLesson />
             <span>{lessons} lessons</span>
           </p>
-          <Link href={button.link}>
-            <a className="flex justify-end items-center space-x-2 group w-1/2 font-rubik transition duration-100 hover:text-blue-500 text-[15px] text-[#576168]">
-              <span>{button.name}</span>
-              <FaLongArrowAltRight className="customTransition group-hover:pl-2" />
-            </a>
-          </Link>
+          <Button {...button} />
         </div>
       </div>
     </div>
