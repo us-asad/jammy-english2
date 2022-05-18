@@ -8,7 +8,7 @@
          },
          "name": "Ice Break - 1",
          "lessons": 29,
-         "button": {
+         "slug": {
             "name": "Start Course",
             "link": "/courses/ice-break-1"
          }
@@ -20,7 +20,7 @@
          },
          "name": "Ice Break - 2",
          "lessons": 29,
-         "button": {
+         "slug": {
             "name": "Start Course",
             "link": "/courses/ice-break-2"
          }
@@ -32,7 +32,7 @@
          },
          "name": "Ice Break - 3",
          "lessons": 29,
-         "button": {
+         "slug": {
             "name": "Start Course",
             "link": "/courses/ice-break-3"
          }
