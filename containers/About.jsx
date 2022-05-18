@@ -1,5 +1,5 @@
 import data from "data/about.json";
-import { Video } from "components";
+import { Video } from "subcomponents";
 import { FaQuoteLeft } from "react-icons/fa";
 
 export default function About() {

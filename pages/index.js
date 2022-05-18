@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import data from "data/main.json";
-import { Main, About, TopCourses, Contact, Footer } from "components";
+import { Main, About, TopCourses, Contact, Footer } from "containers";
 
 export default function Home() {
   return (

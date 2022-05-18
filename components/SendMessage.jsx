@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import data from "data/contact.json";
 import emailjs from '@emailjs/browser';
-import { FormInput } from "components";
+import { FormInput } from "subcomponents";
 
 const Spinner = () => (
   <svg role="status" className="inline w-4 h-4 mr-2 text-[#a9a9b4] ml-[9px] text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

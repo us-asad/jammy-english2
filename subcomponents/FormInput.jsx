@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-
-
 export default function FormInput({ name: n, type, validate }) {
   const [error, setError] = useState("");
   const name = n.toLowerCase();

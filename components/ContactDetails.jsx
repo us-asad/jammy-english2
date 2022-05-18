@@ -2,7 +2,7 @@ import data from "data/contact.json";
 import Image from "next/image";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { SocialIcon } from "components";
+import { SocialIcon } from "subcomponents";
 
 export default function ContactDetails() {
   return (

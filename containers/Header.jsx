@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Navbar, Logo } from "components";
+import { Navbar } from "components";
+import { Logo } from "subcomponents";
 
 export default function Header() {
   const [showNavbar, setShowNavbar] = useState(false);

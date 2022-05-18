@@ -1,7 +1,8 @@
 import data from "data/main.json";
 import Link from "next/link";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { Header, Video } from "components";
+import { Header } from "containers";
+import { Video } from "subcomponents";
 
 export default function Main() {
   return (
