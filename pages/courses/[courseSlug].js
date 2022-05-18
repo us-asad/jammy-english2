@@ -56,7 +56,7 @@ export default function Course() {
               key={lesson.slug.link}
               className="w-[360px] first:mt-10"
             >
-              <TopCourseCard metaData={lesson.time} {...lesson} />
+              <TopCourseCard metaData={lesson.time} mainSlug={`${router.query.courseSlug}/lessons`} {...lesson} />
             </div>
           ))}
         </div>

@@ -1,8 +1,9 @@
 import data from "data/footer.json";
 import mainData from "data/main.json";
 import contactData from "data/contact.json";
+import Link from "next/link";
 import Image from "next/image";
-import { SocialIcon } from "subcomponents";
+import { Logo, SocialIcon } from "subcomponents";
 
 const bottomTextClasses = "text-[12.768px] lg:text-[14px] font-rubik text-center word-spacing-3";
 
@@ -10,14 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="flex flex-col justify-center items-center py-5">
-        <div className="relative w-[101px] h-[21px] mx-auto">
-          <Image
-            src={mainData.logo.src}
-            alt={mainData.logo.alt}
-            layout='fill'
-            objectFit='contain'
-          />
-        </div>
+        <Logo className="w-[101px] h-[21px]" />
         <div className="flex space-x-4 md:space-x-3 justify-center mt-3">
           {contactData.social_icons.map(icon => <SocialIcon key={icon.link} link={icon.link} icon={icon.icon} size={25} />)}
         </div>

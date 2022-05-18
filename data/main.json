@@ -1,6 +1,6 @@
 {
    "logo": {
-      "src": "/logo.svg",
+      "link": "/logo.svg",
       "alt": "Logo"
    },
    "nav_items": [

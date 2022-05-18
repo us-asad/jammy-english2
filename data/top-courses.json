@@ -10,7 +10,7 @@
          "lessons": 29,
          "slug": {
             "name": "Start Course",
-            "link": "/courses/ice-break-1"
+            "link": "ice-break-1"
          }
       },
       {
@@ -22,7 +22,7 @@
          "lessons": 29,
          "slug": {
             "name": "Start Course",
-            "link": "/courses/ice-break-2"
+            "link": "ice-break-2"
          }
       },
       {
@@ -34,7 +34,7 @@
          "lessons": 29,
          "slug": {
             "name": "Start Course",
-            "link": "/courses/ice-break-3"
+            "link": "ice-break-3"
          }
       }
    ]

@@ -33,7 +33,7 @@ export default function TopCourses() {
             className="pb-20"
             itemClass="px-7"
           >
-            {data.top_courses.map(course => <TopCourseCard key={course.slug.link} metaData={`${course.lessons} lessons`} {...course} />)}
+            {data.top_courses.map(course => <TopCourseCard key={course.slug.link} metaData={`${course.lessons} lessons`} mainSlug="courses" {...course} />)}
           </Carousel>
         
       </div>

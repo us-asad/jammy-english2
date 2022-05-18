@@ -4,7 +4,7 @@ import { MdPlayLesson } from "react-icons/md";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Button } from "subcomponents";
 
-export default function TopCoursesCard({ image, name, metaData, slug }) {
+export default function TopCoursesCard({ image, name, metaData, slug, mainSlug }) {
   return (
     <div className="rounded-[16px] bg-white drop-shadow-lg hover:drop-shadow-2xl transition duration-300">
       <div>
@@ -17,7 +17,7 @@ export default function TopCoursesCard({ image, name, metaData, slug }) {
         />
       </div>
       <div className="px-10 pt-6 pb-8">
-        <Link href={slug.link}>
+        <Link href={`/${mainSlug}/${slug.link}`}>
           <a className="text-[18px] font-poppins hover:text-blue-500 transition duration-200 custonLineClamp1">{name}</a>
         </Link>
         <div className="flex mt-5 flex-col justify-center items-center space-y-4 sm:flex-row sm:space-y-0">
@@ -25,7 +25,7 @@ export default function TopCoursesCard({ image, name, metaData, slug }) {
             <MdPlayLesson />
             <span>{metaData}</span>
           </p>
-          <Button {...slug} />
+          <Button {...slug} mainSlug={mainSlug} />
         </div>
       </div>
     </div>
