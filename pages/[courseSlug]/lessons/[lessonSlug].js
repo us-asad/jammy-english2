@@ -27,7 +27,7 @@ export default function Lesson() {
       <div className="h-[70px] bg-black">
         <Header />
       </div>
-      <div className="relative fixed-container">
+      <div className="relative fixed-container min-h-screen">
         <LessonSideBar switchShowSB={switchShowSB} showSideBar={showSideBar} />
         <div className={`customTransition ${showSideBar ? "md:ml-[350px]" : "md:ml-[69px]"}`}>
           <span
@@ -60,19 +60,19 @@ export default function Lesson() {
                     <a
                       rel="noreferrer"
                       target="_blank"
-                      className="p-3 bg-blue-500 rounded-lg text-[12.312px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-blue-400"
+                      className="p-3 bg-blue-500 rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-blue-400"
                     >{btn.name}</a>
                   </Link>
                 ))}
               </div>
               <div className="flex justify-between">
-                <Link href={`/${data.course.slug}/lesson/${data.previous_lesson_btn.slug}`}>
+                <Link href={`/${data.course.slug}/lessons/${data.previous_lesson_btn.slug}`}>
                   <a className={nextPreviousLessonsClassNames}>
                     <HiOutlineArrowNarrowLeft className={arrowClassNames(0)} />
                     <span>{data.previous_lesson_btn.name}</span>
                   </a>
                 </Link>
-                <Link href={`/${data.course.slug}/lesson/${data.next_lesson_btn.slug}`}>
+                <Link href={`/${data.course.slug}/lessons/${data.next_lesson_btn.slug}`}>
                   <a className={nextPreviousLessonsClassNames}>
                     <span>{data.next_lesson_btn.name}</span>
                     <HiOutlineArrowNarrowRight className={arrowClassNames(1)} />
