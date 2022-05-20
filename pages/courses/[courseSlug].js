@@ -4,6 +4,7 @@ import data from "data/courses.json";
 import Head from "next/head";
 import { Header, Footer } from "containers";
 import { TopCourseCard } from "components";
+import { YTVideo } from "subcomponents";
 
 export default function Course() {
   const [videoSize, setVideoSize] = useState(0);
@@ -33,17 +34,7 @@ export default function Course() {
           <Header />
           <h2 className="font-cursive text-[25px] sm:text-[35px] lg:text-[42px] font-medium" >{data.name}</h2>
           <div style={{width: videoSize.width, height: videoSize.height}} />
-          <iframe
-            width="350"
-            height="200"
-            ref={videoRef}
-            src={`https://www.youtube.com/embed/${data.video.youtube_id}`}
-            title={data.name}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="rounded-b-[20px] top-[62px] sm:top-[90px] lg:top-[105px] absolute sm:w-[550px] sm:h-[320px] md:w-[650px] md:h-[350px] lg:w-[750px] xl:w-[850px] lg:h-[400px]"
-          ></iframe>
+          <YTVideo className="sm:w-[550px] sm:h-[320px] md:w-[650px] md:h-[350px] lg:w-[750px] xl:w-[850px] lg:h-[400px] rounded-b-[20px] top-[62px] sm:top-[90px] lg:top-[105px] absolute" ref={videoRef} />
         </div>
       </div>
       <div className="section-banner mt-[10px]">

@@ -1,8 +1,7 @@
 import { useState } from "react";
 
-export default function FormInput({ name: n, type, validate }) {
+export default function FormInput({ name, type, validate }) {
   const [error, setError] = useState("");
-  const name = n.toLowerCase();
 
   const handleValidate = e => {
     const { value } = e.target;
@@ -22,7 +21,7 @@ export default function FormInput({ name: n, type, validate }) {
   }
 
   const fieldOptions = isTextArea => ({
-    name: name,
+    name: name.toLowerCase(),
     required: validate.required,
     minLength: validate.min+1,
     maxLength: validate.max-1,

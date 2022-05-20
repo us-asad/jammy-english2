@@ -6,8 +6,8 @@ import { Button } from "subcomponents";
 
 export default function TopCoursesCard({ image, name, metaData, slug, mainSlug }) {
   return (
-    <div className="rounded-[16px] bg-white drop-shadow-lg hover:drop-shadow-2xl transition duration-300">
-      <div>
+    <div className="rounded-[16px] bg-white overflow-hidden drop-shadow-lg hover:drop-shadow-2xl transition duration-300">
+      <div className="transition duration-300 hover:scale-105">
         <Image
           src={image.link}
           alt={image.alt}

@@ -30,15 +30,15 @@ export default function Navbar({ showNavbar, setShowNavbar }) {
                   onMouseLeave={switchShowDD(false)}
                 />
                 <ol
-                  className={`absolute z-20 left-[-188px] text-center flex flex-wrap w-[500px] bg-white text-black px-8 py-5 rounded customTransition ${showDropDown ? "pointer-events-auto opacity-1 top-[42px]" : "pointer-events-none opacity-0 top-[48px]"}`}
+                  className={`absolute z-20 left-[-28px] border-[1px] border-[#ddd] text-center bg-white text-black px-8 py-5 rounded-sm customTransition ${showDropDown ? "pointer-events-auto opacity-1 top-[42px]" : "pointer-events-none opacity-0 top-[48px]"}`}
                   onMouseEnter={switchShowDD(true)}
                   onMouseLeave={switchShowDD(false)}
                 >
-                <div className="absolute -top-[9px] left-[215px] rotate-45 z-10 bg-white w-7 h-7" />
+                  <div className="absolute -top-[9px] left-[62px] rotate-45 z-10 bg-white w-7 h-7" />
                   {item.dropdown.map(dItem => (
                     <li
                       key={dItem.slug}
-                      className="w-1/3 px-1 py-[10px] link-underline link-underline-black"
+                      className="px-1 py-[6px] w-max hover:text-blue-400 transition duration-200"
                     >
                       <Link href={item.slug + dItem.slug}>
                         <a>{dItem.name}</a>

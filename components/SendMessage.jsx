@@ -22,8 +22,10 @@ export default function SendMessage() {
       emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, formRef.current, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
         .then(result => {
             setResult({ ok: true, email: formRef.current.email.value });
+            setLoading(false);
         }, error => {
-            setResult({ ok: false, error_text: error.text });
+            setResult({ ok: false, error_text: !error.text && "Unknown error, please try again later :(" });
+            setLoading(false);
         });
     }
   };
@@ -42,7 +44,7 @@ export default function SendMessage() {
           >{loading ? data.message.button.loading_name : data.message.button.name}
             {loading && <Spinner className="text-[#a9a9b4] ml-[9px]" />}
           </button>
-          {result.error_text && <span className="block mt-3 text-[18px] font-medium text-red-500">{result.error_text}</span>}
+          {result.error_text && <span className="block mt-3 text-[16.5px] md:text-[18px] font-medium text-red-500">{result.error_text}</span>}
         </form>
       ) : result.ok && (
         <h3 className="text-center text-[16px] sm:text-[22px] break-word font-rubik text-[#2db900]">
