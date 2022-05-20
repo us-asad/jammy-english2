@@ -24,7 +24,7 @@ export default function LessonSideBar({ switchShowSB, showSideBar }) {
       </h3>
       <div
         className={`max-h-full ${showSideBar ? "overflow-y-auto" : "overflow-hidden"}`}
-        style={{maxHeight: `calc(100% - ${headerRef.current?.offsetHeight}px)`}}
+        style={{maxHeight: `calc(100% - ${!headerRef.current?.offsetHeight && "53"}px)`}}
       >
       {data.lessons.map((lesson, i) => (
         <Link key={i} href={`/${data.slug}/lessons/${lesson.slug.link}`}>
