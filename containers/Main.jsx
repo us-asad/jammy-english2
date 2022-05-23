@@ -4,10 +4,10 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { Header } from "containers";
 import { Video } from "subcomponents";
 
-export default function Main() {
+export default function Main({ allCourses }) {
   return (
     <div className="custom-banner text-white">
-      <Header />
+      <Header allCourses={allCourses} />
       <div className="lg:container flex flex-col lg:flex-row mx-auto pt-32 -mb-3 px-6 sm:px-10 lg:pt-[280px] lg:pb-[80px] px-10">
         <div className="lg:w-[52.544%] md:pr-40 lg:pr-16 lg:pb-0">
           <div className="mb-5 flex items-center">

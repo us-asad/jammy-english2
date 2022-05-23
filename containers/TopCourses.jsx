@@ -19,7 +19,9 @@ const responsive = {
 
 const arrowIcon = isRightArrow => (<span className={`absolute transition duration-200 flex items-center px-5 cursor-pointer h-full main_color z-20 text-4xl ${isRightArrow ? "right-1 sm:right-10" : "left-1 sm:left-10"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
-export default function TopCourses() {
+export default function TopCourses({ topCourses }) {
+  if (topCourses?.length < 3) return <></>;
+
   return (
     <section id="top-courses" className="section-banner">
       <div className="xl:container xl:mx-auto pt-[130px] lg:pt-40 dots-bg relative">
@@ -33,13 +35,10 @@ export default function TopCourses() {
             className="pb-20"
             itemClass="px-7"
           >
-            {data.top_courses.map(course => <TopCourseCard key={course.slug.link} metaData={`${course.lessons} lessons`} mainSlug="courses" {...course} />)}
+            {topCourses?.slice(0, 3).map(course => <TopCourseCard key={course?.slug} metaData={`${course?.lessons?.length} lessons`} mainSlug="courses" btnName="Start Course" {...course} />)}
           </Carousel>
-        
       </div>
       </div>
     </section>
   );
 }
-
-        // {data.top_courses.map(course => <TopCourseCard key={course.button.link} {...course} />)}

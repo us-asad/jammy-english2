@@ -7,7 +7,7 @@ const YTVideo = React.forwardRef((props, ref ) => {
       width="350"
       height="200"
       ref={ref && ref}
-      src={`https://www.youtube.com/embed/${data.youtube_video_id}`}
+      src={`https://www.youtube.com/embed/${props.videoId}`}
       title="youtube video watch and relax!"
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

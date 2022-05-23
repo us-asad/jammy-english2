@@ -4,7 +4,7 @@ import Link from "next/link";
 import data from "data/main.json";
 import { MdOutlineKeyboardArrowDown  } from "react-icons/md";
 
-export default function Navbar({ showNavbar, setShowNavbar }) {
+export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
   const [showDropDown, setShowDropDown] = useState(false);
   const router = useRouter();
 
@@ -35,13 +35,13 @@ export default function Navbar({ showNavbar, setShowNavbar }) {
                   onMouseLeave={switchShowDD(false)}
                 >
                   <div className="absolute -top-[9px] left-[62px] rotate-45 z-10 bg-white w-7 h-7" />
-                  {item.dropdown.map(dItem => (
+                  {allCourses?.map(course => (
                     <li
-                      key={dItem.slug}
+                      key={course?.slug}
                       className="px-1 py-[6px] w-max hover:text-blue-400 transition duration-200"
                     >
-                      <Link href={item.slug + dItem.slug}>
-                        <a>{dItem.name}</a>
+                      <Link href={`${item.slug}/${course?.slug}`}>
+                        <a>{course?.name}</a>
                       </Link>
                     </li>
                   ))}
@@ -73,16 +73,16 @@ export default function Navbar({ showNavbar, setShowNavbar }) {
                   {item.name}
                 </p>
                 <ol className={`ml-[12px] text-[16px] ${showDropDown ? "" : "hidden"}`}>
-                  {item.dropdown.map(dItem => (
+                  {allCourses?.map(course => (
                     <li
-                      key={dItem.slug}
-                      className={`px-3 py-1.5 my-1 ${item.slug === router.route ? "bg-[#2131de] text-white rounded" : "border-b-[1px] last:border-b-0"}`}
+                      key={course?.slug}
+                      className={`px-3 py-1.5 my-1 ${course?.slug === router.route ? "bg-[#2131de] text-white rounded" : "border-b-[1px] last:border-b-0"}`}
                     >
-                      <Link href={item.slug + dItem.slug}>
+                      <Link href={`${item.slug}/${course?.slug}`}>
                         <a
                           className="block"
                           onClick={() => setShowNavbar(false)}
-                        >{dItem.name}</a>
+                        >{course?.name}</a>
                       </Link>
                     </li>
                   ))}

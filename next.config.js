@@ -3,4 +3,7 @@ module.exports = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ["media.graphassets.com"]
+  }
 }

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import parser from "html-react-parser";
+import { getAllCourses, getLessonAndCourse } from "services";
 import data from "data/lesson.json";
 import courseData from "data/courses.json";
 import Head from "next/head";
@@ -10,14 +11,15 @@ import { HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight } from "react-icons
 import { Header, LessonSideBar, Footer } from "containers";
 import { YTVideo } from "subcomponents";
 
-const nextPreviousLessonsClassNames = "group flex items-center space-x-1.5 text-[12.312px] md:text-[13.5px] text-blue-500 customTransition hover:text-blue-400";
+const nextPreviousLessonsClassNames = hasOtherPage => `flex items-center space-x-1.5 text-[12.312px] md:text-[13.5px] text-blue-500 customTransition ${!hasOtherPage ? "text-gray-300 pointer-events-none": "group hover:text-blue-400"}`;
 const arrowClassNames = isNext => `text-[15px] customTransition ${isNext ? "group-hover:pl-1" : "group-hover:pr-1"}`;
 
-export default function Lesson() {
+export default function Lesson({ allCourses, lesson, course }) {
   const [showSideBar, setShowSideBar] = useState(false);
   const router = useRouter();
+  const lessonIdx = course?.lessons?.findIndex(({slug}) => slug === lesson?.slug);
 
-  const switchShowSB = () => setShowSideBar(prev => !prev);
+  let switchShowSB = () => setShowSideBar(prev => !prev);
 
   return (
     <div>
@@ -25,10 +27,10 @@ export default function Lesson() {
         <title>Working Well</title>
       </Head>
       <div className="h-[70px] bg-black">
-        <Header />
+        <Header allCourses={allCourses} />
       </div>
       <div className="relative fixed-container min-h-screen">
-        <LessonSideBar switchShowSB={switchShowSB} showSideBar={showSideBar} />
+        <LessonSideBar switchShowSB={switchShowSB} showSideBar={showSideBar} course={course} />
         <div className={`customTransition ${showSideBar ? "md:ml-[350px]" : "md:ml-[69px]"}`}>
           <span
             className={`inline-block md:hidden bg-blue-500 p-[4px] rounded-full cursor-pointer mt-[11px] ml-[11px] customTransition ${showSideBar && "rotate-180"}`}
@@ -37,43 +39,46 @@ export default function Lesson() {
             <MdOutlineArrowBackIos className="text-[22px] text-white font-semibold" />
           </span>
           <div className="xl:mx-auto pb-[50px] px-[24.624px] sm:px-[49.248px] md:px-[54px] lg:px-[90px] pt-0 md:pt-[20px] max-w-[960px]">
-            <h2 className="text-[30px] md:text-[40px] line-clamp-1 font-poppins font-semibold mb-[15px] md:mb-6">{data.name}</h2>
+            <h2 className="text-[30px] md:text-[40px] line-clamp-1 font-poppins font-semibold mb-[15px] md:mb-6">{lesson?.name}</h2>
             <div className="flex space-x-2 mb-[18px] bg-[#f0f3f6] rounded-[6px] py-[9px] px-[18px] text-[13.5px] font-bold font-rubik text-blue-500">
-              <Link href={data.course.slug}>
-                <a className="w-auto line-clamp-1 ">{data.course.name}</a>
+              <Link href={`/courses/${course?.slug}`}>
+                <a className="w-auto line-clamp-1 ">{course?.name}</a>
               </Link>
               <span className="font-sans-serif font-normal text-black">&#62;</span>
-              <Link href={data.slug}>
-                <a className="w-auto line-clamp-1 ">{data.name}</a>
-              </Link>
+              <p className="w-auto line-clamp-1">{lesson?.name}</p>
             </div>
             <div className="iframe-container">
-              <YTVideo />
+              <YTVideo videoId={lesson.youtubeVideoId} />
             </div>
             <div className="prose prose-p:font-rubik my-7 min-w-full">
-              {parser(data.description)}
+              {parser(lesson?.description?.html)}
             </div>
             <div className="border-t-2 border-b-[#e2e7ed]">
               <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 text-center pt-3 pb-5">
-                {data.download.map((btn, i) => (
-                  <Link key={i} href={btn.link}>
-                    <a
-                      rel="noreferrer"
-                      target="_blank"
-                      className="p-3 bg-blue-500 rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-blue-400"
-                    >{btn.name}</a>
-                  </Link>
-                ))}
+                <Link href={lesson?.pdfForStudents?.url}>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    className="p-3 bg-blue-500 rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-blue-400"
+                  >Download PDF for Students</a>
+                </Link>
+                <Link href={lesson?.pdfForTeachers?.url}>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    className="p-3 bg-blue-500 rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-blue-400"
+                  >Download PDF for Teachers</a>
+                </Link>
               </div>
               <div className="flex justify-between">
-                <Link href={`/${data.course.slug}/lessons/${data.previous_lesson_btn.slug}`}>
-                  <a className={nextPreviousLessonsClassNames}>
+                <Link href={`/${course?.slug}/lessons/${course?.lessons?.length && course.lessons[lessonIdx - 1]?.slug}`}>
+                  <a className={nextPreviousLessonsClassNames(course?.lessons?.length && course.lessons[lessonIdx - 1]?.slug)}>
                     <HiOutlineArrowNarrowLeft className={arrowClassNames(0)} />
                     <span>{data.previous_lesson_btn.name}</span>
                   </a>
                 </Link>
-                <Link href={`/${data.course.slug}/lessons/${data.next_lesson_btn.slug}`}>
-                  <a className={nextPreviousLessonsClassNames}>
+                <Link href={`/${course?.slug}/lessons/${course?.lessons?.length && course.lessons[lessonIdx + 1]?.slug}`}>
+                  <a className={nextPreviousLessonsClassNames(course?.lessons?.length && course.lessons[lessonIdx + 1]?.slug)}>
                     <span>{data.next_lesson_btn.name}</span>
                     <HiOutlineArrowNarrowRight className={arrowClassNames(1)} />
                   </a>
@@ -86,4 +91,21 @@ export default function Lesson() {
       <Footer />
     </div>
   );
+}
+
+export async function getServerSideProps({ params: { courseSlug, lessonSlug } }) {
+  const allCourses = await getAllCourses();
+  const result = await getLessonAndCourse(courseSlug, lessonSlug);
+
+  if (!result?.course || !result?.lesson) return {
+    notFound: true
+  }
+
+  return {
+    props: {
+      allCourses,
+      lesson: result.lesson,
+      course: result.course
+    }
+  }
 }
