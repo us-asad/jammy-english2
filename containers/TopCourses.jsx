@@ -19,7 +19,7 @@ const responsive = {
   }
 };
 
-const arrowIcon = isRightArrow => (<span className={`absolute transition duration-200 flex items-center px-5 cursor-pointer h-full main_color z-20 text-4xl ${isRightArrow ? "right-1 sm:right-10" : "left-1 sm:left-10"}`}>{isRightArrow ? "❯" : "❮"}</span>);
+const arrowIcon = isRightArrow => (<span className={`absolute transition duration-200 flex items-center px-5 cursor-pointer h-full text-main z-20 text-4xl ${isRightArrow ? "right-1 sm:right-10" : "left-1 sm:left-10"}`}>{isRightArrow ? "❯" : "❮"}</span>);
 
 export default function TopCourses({ topCourses }) {
   if (topCourses?.length < 3) return <></>;
@@ -27,7 +27,7 @@ export default function TopCourses({ topCourses }) {
   return (
     <section id="top-courses" className="section-banner relative">
       <div className="xl:container xl:mx-auto pt-[130px] lg:pt-40 dots-bg relative z-10">
-        <p className="absolute top-[60px] lg:top-[90px] left-[50px] xl:left-auto text-[20px] font-rubik font-medium after:w-[70%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">{data.top_courses.title}</p>
+        <p data-aos="fade-right" className="absolute top-[60px] lg:top-[90px] left-[50px] xl:left-auto text-[20px] font-rubik font-medium after:w-[70%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">{data.top_courses.title}</p>
         <div className="relative customCarouselForRecentPosts">
           <Carousel
             infinite
@@ -37,13 +37,13 @@ export default function TopCourses({ topCourses }) {
             className="pb-20"
             itemClass="px-7"
           >
-            {topCourses?.slice(0, 3).map(course => <TopCourseCard key={course?.slug} metaData={`${course?.lessons?.length} lessons`} mainSlug="courses" btnName="Start Course" {...course} />)}
+            {topCourses?.slice(0, 3).map(course => <TopCourseCard key={course?.slug} dataAos="zoom-in" metaData={`${course?.lessons?.length} lessons`} mainSlug="courses" btnName="Start Course" {...course} />)}
           </Carousel>
         </div>
       </div>
       <div>
-        <DecorationImg img={shape7} className="bottom-[30px] left-[20%]" />
-        <DecorationImg img={shape11} className="top-[30px] left-32 animate-bounce" />
+        <DecorationImg dataAos="zoom-in" img={shape7} className="bottom-[30px] left-[20%]" />
+        <DecorationImg dataAos="zoom-in" img={shape11} className="top-[30px] left-32 animate-bounce" />
       </div>
     </section>
   );

@@ -3,10 +3,10 @@ import data from "data/main.json";
 import { Navbar } from "components";
 import { Logo } from "subcomponents";
 
-export default function Header({ allCourses, bgLight }) {
+export default function Header({ allCourses, bgLight, dataAos }) {
   const [showNavbar, setShowNavbar] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 main_bg ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"}`;
+  const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 bg-main ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"} ${scrollY > 15 && "bg-white"}`;
 
   const switchNavbarShow = () => setShowNavbar(prev => !prev);
 
@@ -25,8 +25,8 @@ export default function Header({ allCourses, bgLight }) {
   }
 
   return (
-    <div className={`fixed top-0 left-0 z-[100] w-full pt-[30px] md:pt-0 md:mt-0 customTransition ${scrollY > 15 ? `bg-main drop-shadow-25 text-white` : bgLight ? "text-white" : "text-black"}`}>
-      <div className="lg:container mx-auto z-40 flex flex-col md:flex-row justify-between items-center md:h-[70px] md:px-10">
+    <div className={`fixed top-0 left-0 z-[100] w-full pt-[30px] md:pt-0 md:mt-0 customTransition ${scrollY > 10 ? `bg-main drop-shadow-25 text-white` : bgLight ? "text-white" : "text-black"}`}>
+      <div data-aos={dataAos} className="lg:container mx-auto z-40 flex flex-col md:flex-row justify-between items-center md:h-[70px] md:px-10">
         <div className="flex md:block w-full justify-between px-5 md:px-0">
           <Logo className="w-[96px] h-5" />
           <div className="h-full flex items-center justify-end">

@@ -9,9 +9,9 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
   const router = useRouter();
 
   const switchShowDD = v => () => setShowDropDown(v);
-
+  
   return (
-    <nav className="w-full bg-white md:bg-transparent mt-5 md:mt-0">
+    <nav className={`w-full custom-non-desktop-responsive-banner md:bg-transparent mt-5 md:mt-0 ${showNavbar && "text-black"}`}>
       <ul className="hidden md:flex justify-end">
         {data.nav_items.map(item => (
           <li
@@ -59,7 +59,7 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
         {data.nav_items.map(item => (
           <li
             key={item.slug}
-            className={`py-1.5 my-1 ${item.slug === router.route ? "bg-[#2131de] text-white rounded" : "border-b-[1px] last:border-b-0"} ${!item.dropdown ? "px-3" : ""}`}
+            className={`py-1.5 my-1 ${item.slug === router.route ? "bg-main text-white rounded" : "border-b-[1px] border-[#c1c1c1] last:border-b-0"} ${!item.dropdown ? "px-3" : ""}`}
           >
             {item.dropdown ? (
               <>
@@ -76,7 +76,7 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
                   {allCourses?.map(course => (
                     <li
                       key={course?.slug}
-                      className={`px-3 py-1.5 my-1 ${course?.slug === router.route ? "bg-[#2131de] text-white rounded" : "border-b-[1px] last:border-b-0"}`}
+                      className={`px-3 py-1.5 my-1 ${course?.slug === router.query.courseSlug ? "bg-main text-white rounded" : "border-b-[1px] border-[#c1c1c1] last:border-b-0"}`}
                     >
                       <Link href={`${item.slug}/${course?.slug}`}>
                         <a

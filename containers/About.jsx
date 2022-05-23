@@ -8,17 +8,17 @@ export default function About() {
   return (
     <section id="about" className="section-banner relative" style={{backgroundSize: "contain"}}>
       <div className="lg:container mx-auto px-5 sm:px-8 md:px-10 lg:px-24 pt-10 pb-[20px] sm:pb-[30px] lg:pt-16 text-center">
-        <h2 className="mb-5 text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins">
+        <h2 data-aos="fade-up" className="mb-5 text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins">
           {data.title}
         </h2>
-        <p className="font-smooch mb-[38px] lg:px-[120px] text-main text-[20px] leading-[30.4869px] md:text-[25px] font-rubik md:leading-[30px]">
+        <p data-aos="fade-up" className="font-smooch mb-[38px] lg:px-[120px] text-main text-[20px] leading-[30.4869px] md:text-[25px] font-rubik md:leading-[30px]">
           {data.subtitle}
         </p>
-        <div className="drop-shadow-2xl relative">
+        <div data-aos="fade-up" className="drop-shadow-2xl relative">
           <Video />
           <DecorationImg img={shape4} className="top-[-50px] right-[-50px]" />
         </div>
-        <div className="pt-20 lg:px-16">
+        <div data-aos="fade-up" className="pt-20 lg:px-16">
           <FaQuoteLeft className="mb-5 text-[37px] text-main mx-auto" />
           <h2 className="text-[20px] lg:text-[32px] font-poppins">
             {data.quote_text}
@@ -29,9 +29,9 @@ export default function About() {
         </div>
       </div>
       <div>
-        <DecorationImg img={shape5} className="top-[110px] left-32" />
-        <DecorationImg img={shape6} className="bottom-[110px] right-32 animate-spin" style={{animationDuration: "3s"}} />
-        <DecorationImg img={shape8} className="bottom-[210px] left-20" />
+        <DecorationImg dataAos="zoom-in" img={shape5} className="top-[110px] left-32" />
+        <DecorationImg dataAos="zoom-in" img={shape6} className="bottom-[110px] right-32 animate-spin" style={{animationDuration: "3s"}} />
+        <DecorationImg dataAos="zoom-in" img={shape8} className="bottom-[210px] left-20" />
       </div>
     </section>
   );

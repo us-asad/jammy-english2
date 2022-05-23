@@ -36,10 +36,11 @@ export default function SendMessage() {
         <form ref={formRef} onSubmit={sendEmail}>
           {data.message.forms.map((input, i) => (
             <div key={`contact_input_${i}`} className="py-[10px]">
-              <FormInput {...input} />
+              <FormInput dataAos="fade-up" {...input} />
             </div>
           ))}
           <button
+            data-aos="fade-up"
             className={`px-[30px] py-[14px] rounded-full text-white text-[13.68px] md:text-[15px] font-poppins font-semibold mt-[10px] ${loading ? "bg-[#ddd] text-[#a9a9b4] cursor-not-allowed" : "bg-main hover:scale-105 hover:drop-shadow-lg customTransition focus:scale-95"}`}
           >{loading ? data.message.button.loading_name : data.message.button.name}
             {loading && <Spinner className="text-[#a9a9b4] ml-[9px]" />}

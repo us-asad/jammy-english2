@@ -38,7 +38,7 @@ export default function Lesson({ allCourses, lesson, course }) {
             <MdOutlineArrowBackIos className="text-[22px] text-white font-semibold" />
           </span>
           <div className="xl:mx-auto pb-[50px] px-[24.624px] sm:px-[49.248px] md:px-[54px] lg:px-[90px] pt-0 md:pt-[20px] max-w-[960px]">
-            <h2 className="text-[30px] md:text-[40px] line-clamp-1 font-poppins font-semibold mb-[15px] md:mb-6">{lesson?.name}</h2>
+            <h2 className="text-[30px] md:text-[40px] font-poppins font-semibold mb-[15px] md:mb-6">{lesson?.name}</h2>
             <div className="flex space-x-2 mb-[18px] bg-[#f0f3f6] rounded-[6px] py-[9px] px-[18px] text-[13.5px] font-bold font-rubik text-blue-500">
               <Link href={`/courses/${course?.slug}`}>
                 <a className="w-auto line-clamp-1 ">{course?.name}</a>

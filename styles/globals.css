@@ -94,7 +94,7 @@ body {
 
 
 /* BACKGROUND IMAGE */
-.custom-banner {
+.custom-banner, .custom-non-desktop-responsive-banner {
   background-image: url("/main-bg.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -282,6 +282,10 @@ body {
     -moz-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
+  }
+
+  .custom-non-desktop-responsive-banner {
+    background: transparent;
   }
 }
 

@@ -6,11 +6,12 @@ import { BsTelegram } from "react-icons/bs";
 
 const iconClassNames = "text-lg";
 
-export default function SocialIcon({ link, icon, size, blackWhite }) {
+export default function SocialIcon({ link, icon, size, blackWhite, dataAos }) {
   const name = icon.alt.toLowerCase();
 
   return (
-    <a 
+    <a
+      data-aos={dataAos}
       href={link}
       rel="noreferrer"
       target="_blank"

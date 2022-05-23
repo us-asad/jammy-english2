@@ -10,9 +10,9 @@ import { shape1, shape2, shape3, arrow } from "assets";
 export default function Main({ allCourses }) {
   return (
     <div className="custom-banner text-dark relative">
-      <Header allCourses={allCourses} />
+      <Header dataAos="fade-down" allCourses={allCourses} />
       <div className="lg:container flex relative flex-col z-10 lg:flex-row mx-auto pt-32 -mb-3 px-6 sm:px-10 lg:pt-0 px-10">
-        <div className="lg:w-[52.544%] pb-[40px] lg:pb-[80px] lg:pt-[250px]">
+        <div data-aos="fade-right" className="lg:w-[52.544%] pb-[40px] lg:pb-[80px] lg:pt-[250px]">
           <div className="mb-5 flex items-center">
             <span className="w-3 h-3 bg-main rounded-full" />
             <p className="pl-3 text-[13px] font-rubik font-medium tracking-[3px]">{data.main_banner.small_title}</p>
@@ -38,7 +38,7 @@ export default function Main({ allCourses }) {
             </Link>
           ))}
         </div>
-        <div className="lg:w-[47.456%] lg:pt-[200px] mt-auto">
+        <div data-aos="fade-left" className="lg:w-[47.456%] lg:pt-[200px] mt-auto">
           <div className="relative cursor-pointer mb-[-5px] !bg-contain !bg-no-repeat !bg-center" style={{background: "url(/human-bg.png)"}}>
             <Image
               src={humanImg}
@@ -50,10 +50,10 @@ export default function Main({ allCourses }) {
         </div>
       </div>
       <div>
-        <DecorationImg img={shape1} className="2xl:top-[231px] 2xl:left-[50px] top-[170px] left-[-10px]" />
-        <DecorationImg img={arrow} className="bottom-[20px] right-[50%]" />
-        <DecorationImg img={shape2} className="top-[240px] right-[40%]" />
-        <DecorationImg img={shape3} className="top-[250px] right-[90px]" />
+        <DecorationImg dataAos="fade-right" img={shape1} className="2xl:top-[231px] 2xl:left-[50px] top-[170px] left-[-10px]" />
+        <DecorationImg dataAos="fade-up" img={arrow} className="bottom-[20px] right-[50%]" />
+        <DecorationImg dataAos="fade-up" img={shape2} className="top-[240px] right-[40%]" />
+        <DecorationImg dataAos="fade-right" img={shape3} className="top-[250px] right-[90px]" />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function FormInput({ name, type, validate }) {
+export default function FormInput({ name, type, validate, dataAos }) {
   const [error, setError] = useState("");
 
   const handleValidate = e => {
@@ -30,7 +30,7 @@ export default function FormInput({ name, type, validate }) {
   });
 
   return (
-    <div className="flex flex-col">
+    <div data-aos={dataAos} className="flex flex-col">
       <label className="text-[16.416px] md:text-[18px] font-rubik font-bold text-[#576168]">
         {name}
         {validate.required && <span className="text-red-600 font-normal pl-[5px]">*</span>}
