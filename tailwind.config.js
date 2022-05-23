@@ -1,13 +1,23 @@
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/*.{js,ts,jsx,tsx}",
-    "./containers/*.{js,ts,jsx,tsx}",
-    "./subcomponents/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,jsx}",
+    "./components/*.{js,jsx}",
+    "./containers/*.{js,jsx}",
+    "./subcomponents/*.{js,jsx}",
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    color: {
+      "white-color": "#fff",
+      "black-color": "#000"
+    },
+    extend: {
+      colors: {
+        "main": "#525FE1",
+        "light": "#fff",
+        "dark": "#000"
+      }
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 }

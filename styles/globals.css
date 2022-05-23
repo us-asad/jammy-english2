@@ -1,12 +1,34 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;500;700&family=Smooch&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;500;600;700&family=Satisfy&display=swap');
 
 
 /* TAILWIND */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* SCROLLBAR */
+/* width */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #525fe130; 
+}
+ 
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #525FE1;
+  border-radius: 3px; 
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #525fe1c9; 
+}
 
 
 
@@ -73,7 +95,7 @@ body {
 
 /* BACKGROUND IMAGE */
 .custom-banner {
-  background-image: url("/banner.svg");
+  background-image: url("/main-bg.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -110,7 +132,7 @@ body {
 }
 
 .font-smooch {
-  font-family: 'Smooch', cursive;
+  font-family: 'Satisfy', cursive;
 }
 
 .font-cursive {
@@ -120,20 +142,53 @@ body {
 
 
 /* CUSTOM COLORS  */
-.main_bg {
-  background: #f7b500;
+.main-bg-hover:hover {
+  background: #525FE1;
 }
 
-.main_bg_hover:hover {
-  background: #f7b500;
-}
-
-.main_color {
+.main-color {
   color: #f7b500;
 }
 
-.main_color_hover:hover {
+.main-color-hover:hover {
   color: #f7b500; 
+}
+
+.dark-color {
+  color: #000;
+}
+
+.dark-color-hover:hover {
+  color: #000; 
+}
+
+.gray-color {
+  color: #555;
+}
+
+.gray-color-hover:hover {
+  color: #555; 
+}
+
+.light-color {
+  color: #fff;
+}
+
+.light-color-hover:hover {
+  color: #fff; 
+}
+
+.bright-color {
+  color: #ddd;
+}
+
+.bright-color-hover:hover {
+  color: #ddd; 
+}
+
+.main-selection::selection {
+  background: #525FE1;
+  color: #fff;
 }
 
 
@@ -222,10 +277,6 @@ body {
     justify-content: space-evenly;
   }
 
-  .contact_shadow {
-    box-shadow: 0px -20px 20px -23px rgb(0 0 0 / 34%);
-  }
-
   .responsive-transition {
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
@@ -237,6 +288,10 @@ body {
 @media (min-width: 1024px) {
   .dots-bg {
     background-position: top 18px right 34px;
+  }
+
+  .contact_shadow {
+    box-shadow: -20px 0px 20px -23px rgb(0 0 0 / 34%);
   }
 
   .courses-dots-bg {

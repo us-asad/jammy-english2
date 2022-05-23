@@ -11,12 +11,12 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
   const switchShowDD = v => () => setShowDropDown(v);
 
   return (
-    <nav className="w-full bg-white md:bg-transparent text-black md:text-white mt-5 md:mt-0">
+    <nav className="w-full bg-white md:bg-transparent mt-5 md:mt-0">
       <ul className="hidden md:flex justify-end">
         {data.nav_items.map(item => (
           <li
             key={item.slug}
-            className={`mx-[15px] px-[3px] text-[18px] font-rubik ${!item.dropdown ? "link-underline hover:text-gray-300" : "relative"} ${router.route === item.slug ? "text-gray-300" : ""}`}
+            className={`mx-[15px] px-[3px] text-[18px] font-rubik ${!item.dropdown ? "link-underline" : "relative"}`}
           >
             {item.dropdown ? (
               <>
@@ -34,7 +34,7 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
                   onMouseEnter={switchShowDD(true)}
                   onMouseLeave={switchShowDD(false)}
                 >
-                  <div className="absolute -top-[9px] left-[62px] rotate-45 z-10 bg-white w-7 h-7" />
+                  <div className="absolute -top-[9px] left-[62px] rotate-45 z-10 bg-white border-l-[1px] border-t-[1px] border-[#ddd] w-4 h-4" />
                   {allCourses?.map(course => (
                     <li
                       key={course?.slug}

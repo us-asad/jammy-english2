@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import parser from "html-react-parser";
 import { getAllCourses, getLessonAndCourse } from "services";
-import data from "data/lesson.json";
-import courseData from "data/courses.json";
+import data from "data/main.json";
 import Head from "next/head";
 import Link from "next/link";
 import { MdOutlineArrowBackIos } from "react-icons/md";
@@ -11,7 +10,7 @@ import { HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight } from "react-icons
 import { Header, LessonSideBar, Footer } from "containers";
 import { YTVideo } from "subcomponents";
 
-const nextPreviousLessonsClassNames = hasOtherPage => `flex items-center space-x-1.5 text-[12.312px] md:text-[13.5px] text-blue-500 customTransition ${!hasOtherPage ? "text-gray-300 pointer-events-none": "group hover:text-blue-400"}`;
+const nextPreviousLessonsClassNames = hasOtherPage => `flex items-center space-x-1.5 text-[12.312px] md:text-[13.5px] text-main customTransition ${!hasOtherPage ? "text-gray-300 pointer-events-none": "group hover:text-purple-800"}`;
 const arrowClassNames = isNext => `text-[15px] customTransition ${isNext ? "group-hover:pl-1" : "group-hover:pr-1"}`;
 
 export default function Lesson({ allCourses, lesson, course }) {
@@ -26,8 +25,8 @@ export default function Lesson({ allCourses, lesson, course }) {
       <Head>
         <title>Working Well</title>
       </Head>
-      <div className="h-[70px] bg-black">
-        <Header allCourses={allCourses} />
+      <div className="h-[70px] bg-dark">
+        <Header allCourses={allCourses} bgLight />
       </div>
       <div className="relative fixed-container min-h-screen">
         <LessonSideBar switchShowSB={switchShowSB} showSideBar={showSideBar} course={course} />
@@ -59,27 +58,27 @@ export default function Lesson({ allCourses, lesson, course }) {
                   <a
                     rel="noreferrer"
                     target="_blank"
-                    className="p-3 bg-blue-500 rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-blue-400"
-                  >Download PDF for Students</a>
+                    className="p-3 bg-main rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-indigo-500"
+                  >{data.lesson.download_for_students}</a>
                 </Link>
                 <Link href={lesson?.pdfForTeachers?.url}>
                   <a
                     rel="noreferrer"
                     target="_blank"
-                    className="p-3 bg-blue-500 rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-blue-400"
-                  >Download PDF for Teachers</a>
+                    className="p-3 bg-main rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-indigo-500"
+                  >{data.lesson.download_for_teachers}</a>
                 </Link>
               </div>
               <div className="flex justify-between">
                 <Link href={`/${course?.slug}/lessons/${course?.lessons?.length && course.lessons[lessonIdx - 1]?.slug}`}>
                   <a className={nextPreviousLessonsClassNames(course?.lessons?.length && course.lessons[lessonIdx - 1]?.slug)}>
                     <HiOutlineArrowNarrowLeft className={arrowClassNames(0)} />
-                    <span>{data.previous_lesson_btn.name}</span>
+                    <span>{data.lesson.previous_btn_name}</span>
                   </a>
                 </Link>
                 <Link href={`/${course?.slug}/lessons/${course?.lessons?.length && course.lessons[lessonIdx + 1]?.slug}`}>
                   <a className={nextPreviousLessonsClassNames(course?.lessons?.length && course.lessons[lessonIdx + 1]?.slug)}>
-                    <span>{data.next_lesson_btn.name}</span>
+                    <span>{data.lesson.next_btn_name}</span>
                     <HiOutlineArrowNarrowRight className={arrowClassNames(1)} />
                   </a>
                 </Link>

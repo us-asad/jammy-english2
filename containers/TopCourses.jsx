@@ -1,6 +1,8 @@
-import data from "data/top-courses.json";
+import data from "data/main.json";
 import { TopCourseCard } from "components";
-import Carousel from "react-multi-carousel"
+import Carousel from "react-multi-carousel";
+import { DecorationImg } from "subcomponents";
+import { shape7, shape11 } from "assets";
 
 const responsive = {
   superLargeDesktop: {
@@ -23,9 +25,9 @@ export default function TopCourses({ topCourses }) {
   if (topCourses?.length < 3) return <></>;
 
   return (
-    <section id="top-courses" className="section-banner">
-      <div className="xl:container xl:mx-auto pt-[130px] lg:pt-40 dots-bg relative">
-        <p className="absolute top-[60px] lg:top-[90px] left-[50px] xl:left-auto text-[20px] font-rubik font-medium after:w-[70%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">Top Courses</p>
+    <section id="top-courses" className="section-banner relative">
+      <div className="xl:container xl:mx-auto pt-[130px] lg:pt-40 dots-bg relative z-10">
+        <p className="absolute top-[60px] lg:top-[90px] left-[50px] xl:left-auto text-[20px] font-rubik font-medium after:w-[70%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">{data.top_courses.title}</p>
         <div className="relative customCarouselForRecentPosts">
           <Carousel
             infinite
@@ -37,7 +39,11 @@ export default function TopCourses({ topCourses }) {
           >
             {topCourses?.slice(0, 3).map(course => <TopCourseCard key={course?.slug} metaData={`${course?.lessons?.length} lessons`} mainSlug="courses" btnName="Start Course" {...course} />)}
           </Carousel>
+        </div>
       </div>
+      <div>
+        <DecorationImg img={shape7} className="bottom-[30px] left-[20%]" />
+        <DecorationImg img={shape11} className="top-[30px] left-32 animate-bounce" />
       </div>
     </section>
   );

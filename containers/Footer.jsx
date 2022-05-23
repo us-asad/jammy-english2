@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="flex flex-col justify-center items-center py-5">
         <Logo className="w-[101px] h-[21px]" />
         <div className="flex space-x-4 md:space-x-3 justify-center mt-3">
-          {contactData.social_icons.map(icon => <SocialIcon key={icon.link} link={icon.link} icon={icon.icon} size={25} />)}
+          {contactData.social_icons.map(icon => <SocialIcon key={icon.link} link={icon.link} icon={icon.icon} size={25} blackWhite />)}
         </div>
       </div>
       <div className="border-t-[1px] mx-[30px] lg:mx-0 border-[#ffffff66]">

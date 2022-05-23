@@ -11,40 +11,7 @@
       {
          "name": "Courses",
          "slug": "/courses",
-         "dropdown": [
-            {
-               "name": "Beginner 1",
-               "slug": "/beginner-1"
-            },
-            {
-               "name": "Beginner 2",
-               "slug": "/beginner-2"
-            },
-            {
-               "name": "Beginner 3",
-               "slug": "/beginner-3"
-            },
-            {
-               "name": "Beginner 4",
-               "slug": "/beginner-4"
-            },
-            {
-               "name": "Beginner 5",
-               "slug": "/beginner-5"
-            },
-            {
-               "name": "Beginner 6",
-               "slug": "/beginner-6"
-            },
-            {
-               "name": "Beginner 7",
-               "slug": "/beginner-7"
-            },
-            {
-               "name": "Beginner 8",
-               "slug": "/beginner-8"
-            }
-         ]
+         "dropdown": true
       },
       {
          "name": "About",
@@ -76,5 +43,32 @@
          "alt": "Introduction Video"
       }
    },
-   "main_color": "#f7b500"
+   "decoration_items": [
+      "/decoration-items/shape-1.png",
+      "/decoration-items/shape-2.png",
+      "/decoration-items/shape-3.png",
+      "/decoration-items/shape-4.png",
+      "/decoration-items/shape-5.png",
+      "/decoration-items/shape-6.png",
+      "/decoration-items/shape-7.png",
+      "/decoration-items/shape-8.png",
+      "/decoration-items/shape-9.png",
+      "/decoration-items/shape-10.png",
+      "/decoration-items/shape-11.png",
+      "/decoration-items/shape-12.png",
+      "/decoration-items/shape-13.png",
+      "/decoration-items/shape-14.png",
+      "/decoration-items/shape-15.png",
+      "/decoration-items/shape-16.png",
+      "/decoration-items/shape-17.png"
+   ],
+   "lesson": {
+      "previous_btn_name": "Previous Lesson",
+      "next_btn_name": "Next Lesson",
+      "download_for_students": "Download PDF for Students",
+      "download_for_teachers": "Download PDF for Teachers"
+   },
+   "top_courses": {
+      "title": "Top Courses"
+   }
 }

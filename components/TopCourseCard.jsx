@@ -26,7 +26,7 @@ export default function TopCoursesCard({ thumbnail, name, metaData, slug, mainSl
             <span>{metaData}</span>
           </p>
           <Link href={`/${mainSlug}/${slug}`}>
-            <a className="flex justify-center w-full items-center space-x-2 group sm:w-1/2 font-rubik p-[10px] border-[1px] rounded-full focus:scale-95 hover:bg-blue-500 hover:text-white transition duration-100 hover:text-blue-500 text-[15px] text-[#576168]">
+            <a className="flex justify-center w-full items-center space-x-2 group sm:w-1/2 font-rubik p-[10px] border-[1px] rounded-full focus:scale-95 hover:bg-main hover:text-white transition duration-100 hover:text-blue-500 text-[15px] text-[#576168]">
               <span>{btnName}</span>
               <FaLongArrowAltRight className="customTransition group-hover:pl-2" />
             </a>

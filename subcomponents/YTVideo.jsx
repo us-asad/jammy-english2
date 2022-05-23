@@ -1,5 +1,4 @@
 import React from "react";
-import data from "data/lesson.json";
 
 const YTVideo = React.forwardRef((props, ref ) => {
   return (

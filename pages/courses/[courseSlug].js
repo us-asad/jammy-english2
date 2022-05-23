@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import { getAllCourses, getCourse } from "services";
-import data from "data/courses.json";
 import Head from "next/head";
 import { Header, Footer } from "containers";
 import { TopCourseCard } from "components";

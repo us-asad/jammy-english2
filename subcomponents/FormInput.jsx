@@ -26,7 +26,7 @@ export default function FormInput({ name, type, validate }) {
     minLength: validate.min+1,
     maxLength: validate.max-1,
     onBlur: handleValidate,
-    className: `p-[12.312px] md:p-[13.5px] rounded-[2px] border-[#eaeaea] border-[1px] bg-[#fafafa] ${error ? "border-red-600" : "border-[#eaeaea]"} ${isTextArea && "h-[120px]"}`
+    className: `p-[12.312px] md:p-[13.5px] rounded-[2px] border-[#eaeaea] focus-visible:border-main outline-none caret-main border-2 bg-[#fafafa] ${error ? "border-red-600" : "border-[#eaeaea]"} ${isTextArea && "h-[120px]"}`
   });
 
   return (
