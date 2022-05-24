@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.1",
     "@emailjs/browser": "^3.6.2",
     "aos": "^2.3.4",
     "graphql": "^16.5.0",

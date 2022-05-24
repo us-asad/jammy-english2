@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-import data from "data/main.json";
 import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
 
-export default function Video({ additionalStyles }) {
+export default function Video({ additionalStyles, videoLink }) {
   const [playVideo, setPlayVideo] = useState(false);
   const [videoSize, setVideoSize] = useState(0);
   const videoRef = useRef(null);
@@ -33,7 +32,7 @@ export default function Video({ additionalStyles }) {
       {additionalStyles && <div style={{width: videoSize.width, height: videoSize.height}} />}
       <div className={`w-full ${additionalStyles && "absolute top-[50px]"}`}>
         <video
-          src={data.main_banner.video.link}
+          src={videoLink}
           type="video/mp4"
           ref={videoRef}
           className="group rounded-[16px] w-full"

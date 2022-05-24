@@ -93,10 +93,72 @@ export const getLessonAndCourse = async (courseSlug, lessonSlug) => {
           html
         }
       }
+      metaDatas(first: 1) {
+        downloadForStudentsText
+        downloadForTeachersText
+        facebookLink
+        developerName
+        developerLink
+        instagramLink
+        mainName
+        telegramLink
+        youtubeLink
+      }
     }
   `;
 
   const result = await request(graphcmsAPI, query, { courseSlug, lessonSlug });
 
   return result;
+}
+
+export const getMainMetaData = async () => {
+  const query = gql`
+    query MyQuery {
+      metaDatas(first: 1) {
+        email
+        facebookLink
+        firstButtonLink
+        firstButtonName
+        founderText
+        developerName
+        aboutText
+        developerLink
+        instagramLink
+        mainName
+        mainSmallTitle
+        phoneNumber
+        secondButtonLink
+        secondButtonName
+        subtitle
+        telegramLink
+        title
+        youtubeLink
+      }
+    }
+  `;
+
+  const result = await request(graphcmsAPI, query);
+
+  return result.metaDatas[0];
+}
+
+export const getFooterMetaData = async () => {
+  const query = gql`
+    query MyQuery {
+      metaDatas(first: 1) {
+        facebookLink
+        developerName
+        developerLink
+        instagramLink
+        mainName
+        telegramLink
+        youtubeLink
+      }
+    }
+  `;
+
+  const result = await request(graphcmsAPI, query);
+
+  return result.metaDatas[0];
 }

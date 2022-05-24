@@ -1,50 +1,6 @@
 {
    "title": "Contact Us",
-   "contact_details": [
-      {
-         "icon": "phone",
-         "title": "Call Us",
-         "data": "+1 123 456 78 90",
-         "data_link": "tel:+11234567890"
-      },
-      {
-         "icon": "email",
-         "title": "Email Us",
-         "data": "info@jammyenglish.com",
-         "data_link": "mailto:info@jammyenglish.com"
-      }
-   ],
    "social_icons_title": "Follow us",
-   "social_icons": [
-      {
-         "icon": {
-            "link": "/social/youtube.svg",
-            "alt": "youtube"
-         },
-         "link": "/#youtube"
-      },
-      {
-         "icon": {
-            "link": "/social/facebook.svg",
-            "alt": "facebook"
-         },
-         "link": "/#facebook"
-      },
-      {
-         "icon": {
-            "link": "/social/instagram.svg",
-            "alt": "instagram"
-         },
-         "link": "/#instagram"
-      },
-      {
-         "icon": {
-            "link": "/social/telegram.svg",
-            "alt": "telegram"
-         },
-         "link": "/#twitter"
-      }
-   ],
    "message": {
       "forms": [
          {

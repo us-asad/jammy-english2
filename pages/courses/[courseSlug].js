@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { getAllCourses, getCourse } from "services";
+import { getAllCourses, getCourse, getFooterMetaData } from "services";
 import { Header, Footer } from "containers";
 import { TopCourseCard } from "components";
 import { YTVideo, SEO } from "subcomponents";
 
-export default function Course({ allCourses, course }) {
+export default function Course({ allCourses, course, metaData }) {
   const [videoSize, setVideoSize] = useState(0);
   const videoRef = useRef(null);
 
@@ -52,7 +52,7 @@ export default function Course({ allCourses, course }) {
           ))}
         </div>
       </div>
-      <Footer />
+      <Footer metaData={metaData} />
     </div>
   );
 }
@@ -60,6 +60,7 @@ export default function Course({ allCourses, course }) {
 export async function getServerSideProps(context) {
   const allCourses = await getAllCourses();
   const course = await getCourse(context.params.courseSlug);
+  const metaData = await getFooterMetaData();
   
   if (!course) return {
     notFound: true
@@ -68,7 +69,8 @@ export async function getServerSideProps(context) {
   return {
     props: {
       allCourses,
-      course
+      course,
+      metaData
     }
   }
 }

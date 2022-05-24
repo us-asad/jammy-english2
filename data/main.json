@@ -22,53 +22,24 @@
          "slug": "/#contact"
       }
    ],
-   "main_banner": {
-      "small_title": "ON-DEMAND COURSE",
-      "title": "Complete Python Masterclass for Web Development",
-      "subtitle": "Amet facilisi phasellus lacus, sit massa, erat placerat aenean aliquet ultrices eleifend enim enim lacus elit.",
-      "buttons": [
-         {
-            "type": "non-bare",
-            "name": "Start Course",
-            "link": "/#"
-         },
-         {
-            "type": "bare",
-            "name": "View All Courses",
-            "link": "/##"
-         }
-      ],
-      "video": {
-         "link": "/introduction.mp4",
-         "alt": "Introduction Video"
-      }
-   },
-   "decoration_items": [
-      "/decoration-items/shape-1.png",
-      "/decoration-items/shape-2.png",
-      "/decoration-items/shape-3.png",
-      "/decoration-items/shape-4.png",
-      "/decoration-items/shape-5.png",
-      "/decoration-items/shape-6.png",
-      "/decoration-items/shape-7.png",
-      "/decoration-items/shape-8.png",
-      "/decoration-items/shape-9.png",
-      "/decoration-items/shape-10.png",
-      "/decoration-items/shape-11.png",
-      "/decoration-items/shape-12.png",
-      "/decoration-items/shape-13.png",
-      "/decoration-items/shape-14.png",
-      "/decoration-items/shape-15.png",
-      "/decoration-items/shape-16.png",
-      "/decoration-items/shape-17.png"
-   ],
    "lesson": {
       "previous_btn_name": "Previous Lesson",
-      "next_btn_name": "Next Lesson",
-      "download_for_students": "Download PDF for Students",
-      "download_for_teachers": "Download PDF for Teachers"
+      "next_btn_name": "Next Lesson"
    },
    "top_courses": {
       "title": "Top Courses"
+   },
+   "about": {
+      "title": "About Us",
+      "video": {
+         "link": "/introduction.mp4"
+      },
+      "name": "Jamshid Usmonov",
+      "job": "Founder"
+   },
+   "footer": {
+      "powered_by": {
+         "text": "Powered by"
+      }
    }
 }

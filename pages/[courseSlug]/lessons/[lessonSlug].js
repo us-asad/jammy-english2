@@ -12,10 +12,11 @@ import { YTVideo, SEO } from "subcomponents";
 const nextPreviousLessonsClassNames = hasOtherPage => `flex items-center space-x-1.5 text-[12.312px] md:text-[13.5px] text-main customTransition ${!hasOtherPage ? "text-gray-300 pointer-events-none": "group hover:text-purple-800"}`;
 const arrowClassNames = isNext => `text-[15px] customTransition ${isNext ? "group-hover:pl-1" : "group-hover:pr-1"}`;
 
-export default function Lesson({ allCourses, lesson, course }) {
+export default function Lesson({ allCourses, lesson, course, metaDatas }) {
   const [showSideBar, setShowSideBar] = useState(false);
   const router = useRouter();
   const lessonIdx = course?.lessons?.findIndex(({slug}) => slug === lesson?.slug);
+  const metaData = metaDatas[0];
 
   let switchShowSB = () => setShowSideBar(prev => !prev);
 
@@ -56,14 +57,14 @@ export default function Lesson({ allCourses, lesson, course }) {
                     rel="noreferrer"
                     target="_blank"
                     className="p-3 bg-main rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-indigo-500"
-                  >{data.lesson.download_for_students}</a>
+                  >{metaData?.downloadForStudentsText}</a>
                 </Link>
                 <Link href={lesson?.pdfForTeachers?.url}>
                   <a
                     rel="noreferrer"
                     target="_blank"
                     className="p-3 bg-main rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-indigo-500"
-                  >{data.lesson.download_for_teachers}</a>
+                  >{metaData?.downloadForTeachersText}</a>
                 </Link>
               </div>
               <div className="flex justify-between">
@@ -84,7 +85,7 @@ export default function Lesson({ allCourses, lesson, course }) {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer metaData={metaData} />
     </div>
   );
 }
@@ -100,8 +101,7 @@ export async function getServerSideProps({ params: { courseSlug, lessonSlug } })
   return {
     props: {
       allCourses,
-      lesson: result.lesson,
-      course: result.course
+      ...result
     }
   }
 }
