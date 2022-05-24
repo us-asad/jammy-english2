@@ -13,11 +13,11 @@ export default function ContactDetails({ metaData }) {
         <div>
           <span className="inline-block mb-2 font-poppins font-semibold text-[13px]">Call Us</span>
           <a
-            href={`tel:${metaData.phoneNumber}`}
+            href={`tel:${metaData?.phoneNumber}`}
             rel="noreferrer"
             target="_blank"
             className="block font-rubik text-[16.416px] md:text-[18px] font-medium link-underline-dark"
-          >{metaData.phoneNumber}</a>
+          >{metaData?.phoneNumber}</a>
         </div>
       </div>
       <div data-aos="fade-up" className="mb-10 md:mb-5 pb-5 border-b-[1px] border-black flex flex-col sm:flex-row">
@@ -27,11 +27,11 @@ export default function ContactDetails({ metaData }) {
         <div>
           <span className="inline-block mb-2 font-poppins font-semibold text-[13px]">Email Us</span>
           <a
-            href={`mailto:${metaData.email}`}
+            href={`mailto:${metaData?.email}`}
             rel="noreferrer"
             target="_blank"
             className="block font-rubik text-[16.416px] md:text-[18px] font-medium link-underline-dark"
-          >{metaData.email}</a>
+          >{metaData?.email}</a>
         </div>
       </div>
       <h4 className="mb-5 font-poppins font-semibold text-[13px] text-center md:text-left">
