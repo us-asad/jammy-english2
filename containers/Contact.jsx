@@ -18,7 +18,7 @@ export default function Contact() {
             <SendMessage />
           </div>
         </div>
-        <DecorationImg dataAos="zoom-in" img={shape17} className="top-[33px] right-[7px] animate-spin" style={{animationDuration: "5s"}}/>
+        <DecorationImg img={shape17} className="top-[33px] right-[7px] animate-spin" style={{animationDuration: "5s"}}/>
       </div>
       <div>
         <DecorationImg dataAos="zoom-in" img={shape15} className="bottom-32 left-[5%]" />

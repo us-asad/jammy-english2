@@ -2,30 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;500;600;700&family=Satisfy&display=swap');
 
 
-/* TAILWIND */
+/* TAILWIND CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 /* SCROLLBAR */
-/* width */
 *::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 *::-webkit-scrollbar-track {
   background: #525fe130; 
 }
  
-/* Handle */
 *::-webkit-scrollbar-thumb {
   background: #525FE1;
   border-radius: 3px; 
 }
 
-/* Handle on hover */
 *::-webkit-scrollbar-thumb:hover {
   background: #525fe1c9; 
 }
@@ -254,6 +250,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+/* SCROLL TO TOP */
+.styles_scroll-to-top__2A70v svg {
+  margin: auto;
 }
 
 

@@ -5,3 +5,4 @@ export { default as SocialIcon } from "./SocialIcon.jsx";
 export { default as Button } from "./Button.jsx";
 export { default as YTVideo } from "./YTVideo.jsx";
 export { default as DecorationImg } from "./DecorationImg.jsx";
+export { default as SEO } from "./SEO.jsx";

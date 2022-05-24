@@ -5,7 +5,7 @@ export default function DecorationImg({ img, className, style, dataAos }) {
     <div data-aos={dataAos} style={style} className={`hidden xl:block absolute z-[0] ${className}`}>
       <Image
         src={img}
-        alt="shape"
+        alt="decoration shape"
         width={img?.width}
         height={img?.height}
         objectFit="contain"

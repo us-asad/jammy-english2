@@ -1,9 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { getAllCourses, getCourse } from "services";
-import Head from "next/head";
 import { Header, Footer } from "containers";
 import { TopCourseCard } from "components";
-import { YTVideo } from "subcomponents";
+import { YTVideo, SEO } from "subcomponents";
 
 export default function Course({ allCourses, course }) {
   const [videoSize, setVideoSize] = useState(0);
@@ -20,9 +19,7 @@ export default function Course({ allCourses, course }) {
 
   return (
     <div>
-      <Head>
-        <title>Working Well</title>
-      </Head>
+      <SEO title={`${course?.name} Course By Jammy English`} description={`${course?.name} Course. Learn for free at Jammy English Club`} />
       <div
         className="bg-img-configs pt-[85px] -mb-3 px-6 sm:px-10 lg:pt-[125px] px-10 bg-fixed relative"
         style={{backgroundImage: `url(${course?.thumbnail?.url})`}}

@@ -1,5 +1,4 @@
 import data from "data/contact.json";
-import Image from "next/image";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { SocialIcon } from "subcomponents";

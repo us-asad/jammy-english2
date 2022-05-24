@@ -3,13 +3,12 @@ import data from "data/main.json";
 import Head from "next/head";
 import Link from "next/link";
 import { Main, About, TopCourses, Contact, Footer } from "containers";
+import { SEO } from "subcomponents";
 
 export default function Home({ topCourses, allCourses }) {
   return (
     <div className="">
-      <Head>
-        <title>Working Well</title> 
-      </Head>
+      <SEO title="Jammy English Club - Learn English with $0" description="Jammy English Club for English Learners. It's fully free for everybody. Start courses now and change your life!" />
       <Main allCourses={allCourses} />
       <About />
       <TopCourses topCourses={topCourses} />

@@ -8,7 +8,7 @@ export default function Logo({ className }) {
       <a className={`relative cursor-pointer block ${className}`}>
         <Image
           src={data.logo.link}
-          alt={data.logo.alt}
+          alt={data.logo.alt || "Jammy English Logo"}
           layout='fill'
           objectFit='contain'
         />

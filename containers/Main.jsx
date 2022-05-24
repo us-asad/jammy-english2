@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Header } from "containers";
-import { Video, DecorationImg } from "subcomponents";
+import { DecorationImg } from "subcomponents";
 import humanImg from "public/human.png";
 import { shape1, shape2, shape3, arrow } from "assets";
 
@@ -42,6 +42,7 @@ export default function Main({ allCourses }) {
           <div className="relative cursor-pointer mb-[-5px] !bg-contain !bg-no-repeat !bg-center" style={{background: "url(/human-bg.png)"}}>
             <Image
               src={humanImg}
+              alt="English Learner"
               width={humanImg.width}
               height={humanImg.height}
               objectFit='contain'

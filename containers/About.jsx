@@ -30,7 +30,7 @@ export default function About() {
       </div>
       <div>
         <DecorationImg dataAos="zoom-in" img={shape5} className="top-[110px] left-32" />
-        <DecorationImg dataAos="zoom-in" img={shape6} className="bottom-[110px] right-32 animate-spin" style={{animationDuration: "3s"}} />
+        <DecorationImg img={shape6} className="bottom-[110px] right-32 animate-spin" style={{animationDuration: "3s"}} />
         <DecorationImg dataAos="zoom-in" img={shape8} className="bottom-[210px] left-20" />
       </div>
     </section>

@@ -1,14 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import parser from "html-react-parser";
 import { getAllCourses, getLessonAndCourse } from "services";
 import data from "data/main.json";
-import Head from "next/head";
 import Link from "next/link";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { HiOutlineArrowNarrowLeft, HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { Header, LessonSideBar, Footer } from "containers";
-import { YTVideo } from "subcomponents";
+import { YTVideo, SEO } from "subcomponents";
 
 const nextPreviousLessonsClassNames = hasOtherPage => `flex items-center space-x-1.5 text-[12.312px] md:text-[13.5px] text-main customTransition ${!hasOtherPage ? "text-gray-300 pointer-events-none": "group hover:text-purple-800"}`;
 const arrowClassNames = isNext => `text-[15px] customTransition ${isNext ? "group-hover:pl-1" : "group-hover:pr-1"}`;
@@ -22,9 +21,7 @@ export default function Lesson({ allCourses, lesson, course }) {
 
   return (
     <div>
-      <Head>
-        <title>Working Well</title>
-      </Head>
+      <SEO title={`${lesson?.name} of ${course.name} Course by Jammy English`} description={`${lesson?.name} of ${course.name} Course. Learn for free at Jammy English Club`} />
       <div className="h-[70px] bg-dark">
         <Header allCourses={allCourses} bgLight />
       </div>
@@ -47,7 +44,7 @@ export default function Lesson({ allCourses, lesson, course }) {
               <p className="w-auto line-clamp-1">{lesson?.name}</p>
             </div>
             <div className="iframe-container">
-              <YTVideo videoId={lesson.youtubeVideoId} />
+              <YTVideo videoId={lesson?.youtubeVideoId} />
             </div>
             <div className="prose prose-p:font-rubik my-7 min-w-full">
               {parser(lesson?.description?.html)}

@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import data from "data/main.json";
 import { Navbar } from "components";
 import { Logo } from "subcomponents";
 
 export default function Header({ allCourses, bgLight, dataAos }) {
   const [showNavbar, setShowNavbar] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 bg-main ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"} ${scrollY > 15 && "bg-white"}`;
+  const arrowClassNames = index => `w-full h-1 rounded-full transition duration-50 ${showNavbar && index === 0 && "rotate-45"} ${showNavbar && index === 1 && "-rotate-45 -translate-y-2"} ${showNavbar && index === 2 && "hidden"} ${(scrollY > 15 || bgLight) || showNavbar ? "bg-white" : "bg-main"}`;
 
   const switchNavbarShow = () => setShowNavbar(prev => !prev);
 

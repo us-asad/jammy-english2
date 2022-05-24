@@ -1,8 +1,5 @@
 import data from "data/footer.json";
-import mainData from "data/main.json";
 import contactData from "data/contact.json";
-import Link from "next/link";
-import Image from "next/image";
 import { Logo, SocialIcon } from "subcomponents";
 
 const bottomTextClasses = "text-[12.768px] lg:text-[14px] font-rubik text-center word-spacing-3";
