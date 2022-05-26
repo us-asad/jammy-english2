@@ -4,9 +4,9 @@ import { MdPlayLesson } from "react-icons/md";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Button } from "subcomponents";
 
-export default function TopCoursesCard({ thumbnail, name, metaData, slug, mainSlug, btnName, isReady, dataAos }) {
+export default function TopCoursesCard({ thumbnail, name, metaData, slug, mainSlug, btnName, isReady, dataAos}) {
   return (
-    <div data-aos={dataAos} className={`rounded-[16px] bg-white overflow-hidden transition duration-300 drop-shadow-lg ${isReady && "hover:drop-shadow-2xl"}`}>
+    <div data-aos={dataAos} className={`rounded-[16px] bg-white overflow-hidden transition duration-300 drop-shadow-lg ${isReady ? "hover:drop-shadow-2xl" : "cursor-not-allowed"}`}>
       <div className={isReady && "transition duration-300 hover:scale-105"}>
         <Image
           src={thumbnail?.url}

@@ -37,7 +37,7 @@ export default function TopCourses({ topCourses }) {
             className="pb-20"
             itemClass="px-7"
           >
-            {topCourses?.slice(0, 3).map(course => <TopCourseCard key={course?.slug} dataAos="zoom-in" metaData={`${course?.lessons?.length} lessons`} mainSlug="courses" btnName="Start Course" {...course} />)}
+            {topCourses?.slice(0, 3).map(course => <TopCourseCard key={course?.slug} dataAos="zoom-in" metaData={`${course?.lessons?.length} lessons`} mainSlug="courses" btnName="Start Course" isCourse {...course} />)}
           </Carousel>
         </div>
       </div>

@@ -47,7 +47,7 @@ export default function Course({ allCourses, course, metaData }) {
               key={lesson?.slug}
               className="w-[360px] first:mt-10"
             >
-              <TopCourseCard dataAos="fade-up" metaData={lesson?.timeOfVideo} mainSlug={`${course?.slug}/lessons`} {...lesson} btnName="Start Lesson" />
+              <TopCourseCard dataAos="fade-up" metaData={lesson?.timeOfVideo} mainSlug={`${course?.slug}/lessons`} isReady={true} {...lesson} btnName="Start Lesson" />
             </div>
           ))}
         </div>
