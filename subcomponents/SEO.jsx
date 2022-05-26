@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const url = process.env.URL || "http://localhost:3000";
+const url = process.env.NEXT_PUBLIC_URL;
 
 export default function SEO({ title, description }) {
   return (
