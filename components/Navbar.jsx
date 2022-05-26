@@ -40,7 +40,7 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses, scrollY,
                       key={course?.slug}
                       className={`px-1 py-[6px] w-max hover:text-blue-400 transition duration-200 ${!course.isReady ? "text-gray-300 pointer-events-none select-none relative" : "hover:text-blue-400"}`}
                     >
-                      {!course?.isReady && <span className="absolute text-[11px] -top-1.5 right-0 font-semibold text-amber-400">coming soon</span>}
+                      {!course?.isReady && <span className="absolute text-[11px] -top-1.5 right-0 font-semibold text-amber-400 w-max">coming soon</span>}
                       <Link href={`${item.slug}/${course?.slug}`}>
                         <a>{course?.name}</a>
                       </Link>
@@ -77,8 +77,9 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses, scrollY,
                   {allCourses?.map(course => (
                     <li
                       key={course?.slug}
-                      className={`px-3 py-1.5 my-1 ${course?.slug === router.query.courseSlug ? "bg-main text-white rounded" : "border-b-[1px] border-[#c1c1c1] last:border-b-0"}`}
+                      className={`px-3 py-1.5 my-1 ${course?.slug === router.query.courseSlug ? "bg-main text-white rounded" : "border-b-[1px] border-[#c1c1c1] last:border-b-0"} ${!course.isReady ? "text-gray-300 pointer-events-none select-none relative" : "hover:text-blue-400"}`}
                     >
+                      {!course?.isReady && <span className="absolute text-[11px] -top-1.5 right-0 font-semibold text-amber-400">coming soon</span>}
                       <Link href={`${item.slug}/${course?.slug}`}>
                         <a
                           className="block"
