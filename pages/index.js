@@ -1,4 +1,4 @@
-import { getTopCourses, getAllCourses, getMainMetaData } from "services";
+import { getTopCourses, getAllCourses } from "services";
 import data from "data/main.json";
 import Head from "next/head";
 import Link from "next/link";
@@ -19,15 +19,14 @@ export default function Home({ topCourses, allCourses, metaData }) {
 }
 
 export async function getServerSideProps() {
-  const topCourses = await getTopCourses();
+  const result = await getTopCourses();
   const allCourses = await getAllCourses();
-  const metaData = await getMainMetaData();
 
   return {
     props: {
-      topCourses,
       allCourses,
-      metaData
+      topCourses: result.courses,
+      metaData: result.metaDatas[0]
     }
   }
 }

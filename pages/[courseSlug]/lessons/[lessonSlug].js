@@ -22,7 +22,7 @@ export default function Lesson({ allCourses, lesson, course, metaDatas }) {
 
   return (
     <div>
-      <SEO title={`${lesson?.name} of ${course.name} Course by Jammy English`} description={`${lesson?.name} of ${course.name} Course. Learn for free at Jammy English Club`} />
+      <SEO title={`${lesson?.name} of ${course.name} Course by ${metaData.mainName}`} description={`${lesson?.name} of ${course.name} Course. Learn for free at ${metaData.mainName}`} />
       <div className="h-[70px] bg-dark">
         <Header allCourses={allCourses} bgLight />
       </div>

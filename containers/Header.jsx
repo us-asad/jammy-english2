@@ -36,7 +36,7 @@ export default function Header({ allCourses, bgLight, dataAos }) {
             </div>
           </div>
         </div>
-        <Navbar showNavbar={showNavbar} setShowNavbar={setShowNavbar} allCourses={allCourses} />
+        <Navbar bgLight={bgLight} scrollY={scrollY} showNavbar={showNavbar} setShowNavbar={setShowNavbar} allCourses={allCourses} />
       </div>
       {showNavbar && <div onClick={switchNavbarShow} className="absolute z-[-1] top-0 left-0 w-screen h-[1000vh] bg-black opacity-70"></div>}
     </div>

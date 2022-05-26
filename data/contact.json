@@ -13,15 +13,6 @@
             }
          },
          {
-            "name": "second name",
-            "type": "text",
-            "validate": {
-               "min": 3,
-               "max": 10,
-               "required": true
-            }
-         },
-         {
             "name": "Email",
             "type": "email",
             "validate": {

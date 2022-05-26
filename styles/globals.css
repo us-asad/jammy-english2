@@ -1,11 +1,59 @@
-/* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Rubik:wght@400;500;600;700&family=Satisfy&display=swap');
-
-
 /* TAILWIND CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* FONTS */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Rubik-Bold.ttf');
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/Rubik-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/Rubik-Medium.ttf');
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Rubik-Regular.ttf');
+}
+
+@font-face {
+  font-family: "Satisfy";
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Satisfy-Regular.ttf');
+}
+
 
 
 /* SCROLLBAR */

@@ -8,6 +8,7 @@ export const getAllCourses = async () => {
       courses {
         name
         slug
+        isReady
       }
     }
   `;
@@ -27,17 +28,38 @@ export const getTopCourses = async () => {
         thumbnail {
           url
         }
+        isReady
         youtubeVideoId
         lessons {
           id
         }
+      }
+      metaDatas(first: 1) {
+        email
+        facebookLink
+        firstButtonLink
+        firstButtonName
+        founderText
+        developerName
+        aboutText
+        developerLink
+        instagramLink
+        mainName
+        mainSmallTitle
+        phoneNumber
+        secondButtonLink
+        secondButtonName
+        subtitle
+        telegramLink
+        title
+        youtubeLink
       }
     }
   `;
 
   const result = await request(graphcmsAPI, query);
 
-  return result.courses;
+  return result;
 }
 
 export const getCourse = async slug => {
@@ -59,12 +81,21 @@ export const getCourse = async slug => {
           timeOfVideo
         }
       }
+      metaDatas(first: 1) {
+        facebookLink
+        developerName
+        developerLink
+        instagramLink
+        mainName
+        telegramLink
+        youtubeLink
+      }
     }
   `;
 
   const result = await request(graphcmsAPI, query, { slug });
 
-  return result?.course;
+  return result;
 }
 
 export const getLessonAndCourse = async (courseSlug, lessonSlug) => {
@@ -110,55 +141,4 @@ export const getLessonAndCourse = async (courseSlug, lessonSlug) => {
   const result = await request(graphcmsAPI, query, { courseSlug, lessonSlug });
 
   return result;
-}
-
-export const getMainMetaData = async () => {
-  const query = gql`
-    query MyQuery {
-      metaDatas(first: 1) {
-        email
-        facebookLink
-        firstButtonLink
-        firstButtonName
-        founderText
-        developerName
-        aboutText
-        developerLink
-        instagramLink
-        mainName
-        mainSmallTitle
-        phoneNumber
-        secondButtonLink
-        secondButtonName
-        subtitle
-        telegramLink
-        title
-        youtubeLink
-      }
-    }
-  `;
-
-  const result = await request(graphcmsAPI, query);
-
-  return result.metaDatas[0];
-}
-
-export const getFooterMetaData = async () => {
-  const query = gql`
-    query MyQuery {
-      metaDatas(first: 1) {
-        facebookLink
-        developerName
-        developerLink
-        instagramLink
-        mainName
-        telegramLink
-        youtubeLink
-      }
-    }
-  `;
-
-  const result = await request(graphcmsAPI, query);
-
-  return result.metaDatas[0];
 }

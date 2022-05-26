@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import data from "data/main.json";
-import { MdOutlineKeyboardArrowDown  } from "react-icons/md";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
-export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
+export default function Navbar({ showNavbar, setShowNavbar, allCourses, scrollY, bgLight }) {
   const [showDropDown, setShowDropDown] = useState(false);
   const router = useRouter();
 
@@ -16,7 +16,7 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
         {data.nav_items.map(item => (
           <li
             key={item.slug}
-            className={`mx-[15px] px-[3px] text-[18px] font-rubik ${!item.dropdown ? "link-underline" : "relative"}`}
+            className={`mx-[15px] px-[3px] text-[18px] font-rubik ${!item.dropdown ? bgLight || scrollY > 10 ? "link-underline" : "link-underline-dark" : "relative"}`}
           >
             {item.dropdown ? (
               <>
@@ -38,8 +38,9 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses }) {
                   {allCourses?.map(course => (
                     <li
                       key={course?.slug}
-                      className="px-1 py-[6px] w-max hover:text-blue-400 transition duration-200"
+                      className={`px-1 py-[6px] w-max hover:text-blue-400 transition duration-200 ${!course.isReady ? "text-gray-300 pointer-events-none select-none relative" : "hover:text-blue-400"}`}
                     >
+                      {!course?.isReady && <span className="absolute text-[11px] -top-1.5 right-0 font-semibold text-amber-400">coming soon</span>}
                       <Link href={`${item.slug}/${course?.slug}`}>
                         <a>{course?.name}</a>
                       </Link>

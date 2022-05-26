@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { getAllCourses, getCourse, getFooterMetaData } from "services";
+import { getAllCourses, getCourse } from "services";
 import { Header, Footer } from "containers";
 import { TopCourseCard } from "components";
 import { YTVideo, SEO } from "subcomponents";
@@ -19,7 +19,7 @@ export default function Course({ allCourses, course, metaData }) {
 
   return (
     <div>
-      <SEO title={`${course?.name} Course By Jammy English`} description={`${course?.name} Course. Learn for free at Jammy English Club`} />
+      <SEO title={`${course?.name} Course By ${metaData.mainName}`} description={`${course?.name} Course. Learn for free at ${metaData.mainName}`} />
       <div
         className="bg-img-configs pt-[85px] -mb-3 px-6 sm:px-10 lg:pt-[125px] px-10 bg-fixed relative"
         style={{backgroundImage: `url(${course?.thumbnail?.url})`}}
@@ -58,19 +58,18 @@ export default function Course({ allCourses, course, metaData }) {
 }
 
 export async function getServerSideProps(context) {
+  const result = await getCourse(context.params.courseSlug);
   const allCourses = await getAllCourses();
-  const course = await getCourse(context.params.courseSlug);
-  const metaData = await getFooterMetaData();
   
-  if (!course) return {
+  if (!result?.course) return {
     notFound: true
   }
 
   return {
     props: {
       allCourses,
-      course,
-      metaData
+      course: result?.course,
+      metaData: result?.metaDatas[0]
     }
   }
 }
