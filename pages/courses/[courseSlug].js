@@ -60,8 +60,8 @@ export default function Course({ allCourses, course, metaData }) {
 export async function getServerSideProps(context) {
   const result = await getCourse(context.params.courseSlug);
   const allCourses = await getAllCourses();
-  
-  if (!result?.course) return {
+
+  if (!result?.course || !result?.course?.isReady) return {
     notFound: true
   }
 

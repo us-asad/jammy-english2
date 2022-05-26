@@ -68,6 +68,7 @@ export const getCourse = async slug => {
       course(where: {slug: $slug}) {
         name
         slug
+        isReady
         thumbnail {
           url
         }
