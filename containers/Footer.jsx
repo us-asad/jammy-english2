@@ -18,7 +18,7 @@ export default function Footer({ metaData }) {
       </div>
       <div className="border-t-[1px] mx-[30px] lg:mx-0 border-[#ffffff66]">
         <div className="lg:container lg:mx-auto xl:px-10 py-5 flex flex-col sm:flex-row sm:justify-between items-center">
-          <p className={`${bottomTextClasses} mb-[10px] sm:mb-0`}>Copyright © {new Date().getFullYear()} {metaData?.mainName}</p>
+          <p className={`${bottomTextClasses} mb-[10px] sm:mb-0`}>Copyright © {new Date().getFullYear()} {metaData?.mainName} - All Rights Reserved</p>
           <p className={bottomTextClasses}>
             <span>{data.footer.powered_by.text}</span>&nbsp;
             <a
