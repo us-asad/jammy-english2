@@ -1,17 +1,11 @@
-import data from "data/main.json";
 import Link from "next/link";
-import Image from "next/image";
+import { Logo } from "subcomponents/Svgs.jsx";
 
-export default function Logo({ className }) {
+export default function LogoComponent({ className, logo, metaData, fill }) {
   return (
     <Link href="/">
-      <a className={`relative cursor-pointer block ${className}`}>
-        <Image
-          src={data.logo.link}
-          alt={data.logo.alt || "Jammy English Logo"}
-          layout='fill'
-          objectFit='contain'
-        />
+      <a>
+        <Logo className={className} fill={fill} />
       </a>
     </Link>
   );

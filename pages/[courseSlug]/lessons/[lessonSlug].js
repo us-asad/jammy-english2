@@ -23,8 +23,8 @@ export default function Lesson({ allCourses, lesson, course, metaDatas }) {
   return (
     <div>
       <SEO title={`${lesson?.name} of ${course.name} Course by ${metaData.mainName}`} description={`${lesson?.name} of ${course.name} Course. Learn for free at ${metaData.mainName}`} />
-      <div className="h-[70px] bg-dark">
-        <Header allCourses={allCourses} bgLight />
+      <div className="h-[85px] bg-dark">
+        <Header metaData={metaData} allCourses={allCourses} bgDark />
       </div>
       <div className="relative fixed-container min-h-screen">
         <LessonSideBar switchShowSB={switchShowSB} showSideBar={showSideBar} course={course} />

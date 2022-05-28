@@ -34,7 +34,7 @@ export default function ContactDetails({ metaData }) {
           >{metaData?.email}</a>
         </div>
       </div>
-      <h4 className="mb-5 font-poppins font-semibold text-[13px] text-center md:text-left">
+      <h4 data-aos="fade-up" className="mb-5 font-poppins font-semibold text-[13px] text-center md:text-left">
         {data.social_icons_title}
       </h4>
       <div className="flex space-x-4 md:space-x-3 justify-center md:justify-start">

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Router from "next/router";
+import Head from "next/head";
 import ProgressBar from "@badrap/bar-of-progress";
 import Aos from "aos";
 import ScrollToTop from "react-scroll-to-top";
@@ -26,6 +27,12 @@ function App({ Component, pageProps }) {
 
   return (
     <main className="overflow-x-hidden min-w-screen min-h-screen selection:bg-main selection:text-white">
+      <Head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+      </Head>
       <Component {...pageProps} />
       <ScrollToTop smooth color="#525FE1" />
     </main>

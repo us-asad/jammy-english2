@@ -7,7 +7,7 @@ import { Button } from "subcomponents";
 export default function TopCoursesCard({ thumbnail, name, metaData, slug, mainSlug, btnName, isReady, dataAos}) {
   return (
     <div data-aos={dataAos} className={`rounded-[16px] bg-white overflow-hidden transition duration-300 drop-shadow-lg ${isReady ? "hover:drop-shadow-2xl" : "cursor-not-allowed"}`}>
-      <div className={isReady && "transition duration-300 hover:scale-105"}>
+      <div className={isReady ? "transition duration-300 hover:scale-105" : ""}>
         <Image
           src={thumbnail?.url}
           alt="Top Course"
@@ -18,7 +18,7 @@ export default function TopCoursesCard({ thumbnail, name, metaData, slug, mainSl
       </div>
       <div className="px-10 pt-6 pb-8">
         <Link href={`/${mainSlug}/${slug}`}>
-          <a className={`text-[18px] font-poppins transition duration-200 custonLineClamp1 ${isReady ? "hover:text-blue-500" : "pointer-events-none select-none text-gray-300"}`}>{name}</a>
+          <a className={`text-[18px] font-poppins transition duration-200 line-clamp-1 ${isReady ? "hover:text-blue-500" : "pointer-events-none select-none text-gray-300"}`}>{name}</a>
         </Link>
         <div className="flex mt-5 flex-col justify-center items-center space-y-4 sm:flex-row sm:space-y-0">
           {isReady && <p className="flex items-center justify-center sm:justify-start space-x-2 w-1/2 font-rubik text-[15px] text-[#576168]">

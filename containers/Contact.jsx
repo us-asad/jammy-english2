@@ -10,7 +10,7 @@ export default function Contact({ metaData }) {
         {data.title}
       </h2>
       <div className="container mx-auto pt-[100px] pb-[35px] sm:pb-[50px] md:pt-[130px] md:pb-[70px] px-6 md:px-10 xl:px-28 relative z-10">
-        <div className="flex flex-col lg:flex-row w-full rounded-b-lg lg:rounded-b-[26px] bg-white relative z-10">
+        <div className="flex flex-col lg:flex-row w-full rounded-[19px] bg-white relative z-10">
           <div className="lg:w-1/2 flex justify-center items-center">
             <ContactDetails metaData={metaData} />
           </div>

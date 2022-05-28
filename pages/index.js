@@ -21,7 +21,7 @@ export default function Home({ topCourses, allCourses, metaData }) {
 export async function getServerSideProps() {
   const result = await getTopCourses();
   const allCourses = await getAllCourses();
-
+console.log(result.metaDatas[0])
   return {
     props: {
       allCourses,

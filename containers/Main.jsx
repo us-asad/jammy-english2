@@ -10,7 +10,7 @@ import { shape1, shape2, shape3, arrow } from "assets";
 export default function Main({ allCourses, metaData }) {
   return (
     <div className="custom-banner text-dark relative">
-      <Header dataAos="fade-down" allCourses={allCourses} />
+      <Header dataAos="fade-down" allCourses={allCourses} metaData={metaData} />
       <div className="lg:container flex relative flex-col z-10 lg:flex-row mx-auto pt-32 -mb-3 px-6 sm:px-10 lg:pt-0 px-10">
         <div data-aos="fade-right" className="lg:w-[52.544%] pb-[40px] lg:pb-[80px] lg:pt-[250px]">
           <div className="mb-5 flex items-center">

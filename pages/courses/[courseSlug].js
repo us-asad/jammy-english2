@@ -26,13 +26,13 @@ export default function Course({ allCourses, course, metaData }) {
       >
         <div className="absolute w-full h-full top-0 left-0 bg-[#0000009e] z-[2]" />
         <div className="flex justify-center items-center flex-col z-[5] w-full text-white relative">
-          <Header dataAos="fade-down" allCourses={allCourses} bgLight />
+          <Header metaData={metaData} dataAos="fade-down" allCourses={allCourses} bgDark />
           <h2 data-aos="fade-up" className="font-cursive text-[25px] sm:text-[35px] lg:text-[42px] font-medium">{course?.name}</h2>
           <div style={{width: videoSize?.width, height: videoSize?.height}} />
           <YTVideo
             dataAos="fade-up"
             videoId={course?.youtubeVideoId}
-            className="sm:w-[550px] sm:h-[320px] md:w-[650px] md:h-[350px] lg:w-[750px] xl:w-[850px] lg:h-[400px] rounded-b-[20px] top-[62px] sm:top-[90px] lg:top-[105px] absolute"
+            className="sm:w-[550px] sm:h-[320px] md:w-[650px] md:h-[350px] lg:w-[750px] xl:w-[850px] lg:h-[400px] rounded-[19px] top-[62px] sm:top-[90px] lg:top-[105px] absolute"
             ref={videoRef}
           />
         </div>

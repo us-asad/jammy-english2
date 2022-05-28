@@ -53,6 +53,9 @@ export const getTopCourses = async () => {
         telegramLink
         title
         youtubeLink
+        video {
+          url
+        }
       }
     }
   `;

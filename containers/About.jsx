@@ -11,11 +11,11 @@ export default function About({ metaData }) {
         <h2 data-aos="fade-up" className="mb-5 text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins">
           {data.about.title}
         </h2>
-        <p data-aos="fade-up" className="font-smooch mb-[38px] lg:px-[120px] text-main text-[20px] leading-[30.4869px] md:text-[25px] font-rubik md:leading-[30px]">
+        <p data-aos="fade-up" className="font-rubik word-spacing-3 mb-[38px] lg:px-[120px] text-[#000000d9] text-[20px] leading-[30.4869px] md:text-[25px] font-rubik md:leading-[30px]">
           {metaData?.aboutText}
         </p>
         <div data-aos="fade-up" className="drop-shadow-2xl relative">
-          <Video videoLink={data.about.video.link} />
+          <Video video={metaData?.video} />
           <DecorationImg img={shape4} className="top-[-50px] right-[-50px]" />
         </div>
         <div data-aos="fade-up" className="pt-20 lg:px-16">
