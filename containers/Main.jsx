@@ -40,7 +40,7 @@ export default function Main({ allCourses, metaData }) {
           </Link>
         </div>
         <div data-aos="fade-left" className="lg:w-[47.456%] lg:pt-[200px] mt-auto">
-          <div className="relative cursor-pointer mb-[-5px] !bg-contain !bg-no-repeat !bg-center" style={{background: "url(/human-bg.png)"}}>
+          <div className="relative mb-[-5px] !bg-contain !bg-no-repeat !bg-center" style={{background: "url(/human-bg.png)"}}>
             <Image
               src={humanImg}
               alt="English Learner"

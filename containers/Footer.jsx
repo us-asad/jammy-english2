@@ -8,7 +8,7 @@ export default function Footer({ metaData }) {
   return (
     <footer className="bg-black text-white">
       <div className="flex flex-col justify-center items-center py-5">
-        <Logo logo={metaData?.logo} metaData={metaData} fill="#fff" />
+        <Logo logo={metaData?.logo} metaData={metaData} fill="white" />
         <div className="flex space-x-4 md:space-x-5 justify-center mt-3">
           {metaData?.facebookLink && <SocialIcon link={metaData?.facebookLink} icon={{link: "/social/facebook.svg", alt: "facebook"}} size={25} blackWhite />}
           {metaData?.instagramLink && <SocialIcon link={metaData?.instagramLink} icon={{link: "/social/instagram.svg", alt: "instagram"}} size={25} blackWhite />}
@@ -18,7 +18,7 @@ export default function Footer({ metaData }) {
       </div>
       <div className="border-t-[1px] mx-[30px] lg:mx-0 border-[#ffffff66]">
         <div className="lg:container lg:mx-auto xl:px-10 py-5 flex flex-col sm:flex-row sm:justify-between items-center">
-          <p className={`${bottomTextClasses} mb-[10px] sm:mb-0`}>Copyright © {new Date().getFullYear()} {metaData?.mainName} - All Rights Reserved</p>
+          <p className={`${bottomTextClasses} mb-[10px] sm:mb-0`}>Copyright © {new Date().getFullYear()} {metaData?.mainName}</p>
           <p className={bottomTextClasses}>
             <span>{data.footer.powered_by.text}</span>&nbsp;
             <a

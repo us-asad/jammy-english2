@@ -8,10 +8,10 @@ export default function About({ metaData }) {
   return (
     <section id="about" className="section-banner relative" style={{backgroundSize: "contain"}}>
       <div className="lg:container mx-auto px-5 sm:px-8 md:px-10 lg:px-24 pt-10 pb-[20px] sm:pb-[30px] lg:pt-16 text-center">
-        <h2 data-aos="fade-up" className="mb-5 text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins">
+        <h2 data-aos="fade-up" className="mb-5 text-[#000000f0] text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins">
           {data.about.title}
         </h2>
-        <p data-aos="fade-up" className="font-rubik word-spacing-3 mb-[38px] lg:px-[120px] text-[#000000d9] text-[20px] leading-[30.4869px] md:text-[25px] font-rubik md:leading-[30px]">
+        <p data-aos="fade-up" className="font-sans word-spacing-3 mb-[38px] lg:px-[120px] text-[#000000d9] text-[20px] leading-[30.4869px] md:text-[25px] md:leading-[30px]">
           {metaData?.aboutText}
         </p>
         <div data-aos="fade-up" className="drop-shadow-2xl relative">

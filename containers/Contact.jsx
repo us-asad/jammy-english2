@@ -5,8 +5,9 @@ import { shape15, shape17 } from "assets";
 
 export default function Contact({ metaData }) {
   return (
-    <section id="contact" className="custom-banner relative">
-      <h2 data-aos="fade-up" className="absolute top-[31px] md:top-[35px] w-full text-center text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins text-black">
+    <section className="custom-banner relative">
+      <div id="contact" className="absolute w-full h-10 -top-20" />
+      <h2 data-aos="fade-up" className="absolute text-[#000000f0] top-[31px] md:top-[35px] w-full text-center text-[30px] leading-[39px] md:text-[56px] md:leading-[72.8px] font-semibold font-poppins text-black">
         {data.title}
       </h2>
       <div className="container mx-auto pt-[100px] pb-[35px] sm:pb-[50px] md:pt-[130px] md:pb-[70px] px-6 md:px-10 xl:px-28 relative z-10">

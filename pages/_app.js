@@ -34,7 +34,7 @@ function App({ Component, pageProps }) {
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </Head>
       <Component {...pageProps} />
-      <ScrollToTop smooth color="#525FE1" />
+      <ScrollToTop smooth color="#525FE1" style={{zIndex: 80}} />
     </main>
   );
 }
