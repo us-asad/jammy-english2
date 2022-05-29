@@ -8,7 +8,7 @@ export default function Footer({ metaData }) {
   return (
     <footer className="bg-black text-white">
       <div className="flex flex-col justify-center items-center py-5">
-        <Logo logo={metaData?.logo} metaData={metaData} fill="white" />
+        <Logo logo={metaData?.logo} metaData={metaData} fill="white" containerClassName="pr-[5px]" />
         <div className="flex space-x-4 md:space-x-5 justify-center mt-3">
           {metaData?.facebookLink && <SocialIcon link={metaData?.facebookLink} icon={{link: "/social/facebook.svg", alt: "facebook"}} size={25} blackWhite />}
           {metaData?.instagramLink && <SocialIcon link={metaData?.instagramLink} icon={{link: "/social/instagram.svg", alt: "instagram"}} size={25} blackWhite />}
