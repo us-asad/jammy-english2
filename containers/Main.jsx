@@ -6,10 +6,8 @@ import { Header } from "containers";
 import { DecorationImg } from "subcomponents";
 import humanImg from "public/human.png";
 import { shape1, shape2, shape3, arrow } from "assets";
-import * as a from "assets";
 
 export default function Main({ allCourses, metaData }) {
-  console.log(a);
   return (
     <div className="custom-banner text-dark relative">
       <Header dataAos="fade-down" allCourses={allCourses} metaData={metaData} />

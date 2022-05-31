@@ -24,20 +24,20 @@ export default function Lesson({ allCourses, lesson, course, metaDatas }) {
     <div>
       <SEO title={`${lesson?.name} of ${course.name} Course by ${metaData.mainName}`} description={`${lesson?.name} of ${course.name} Course. Learn for free at ${metaData.mainName}`} />
       <div className="h-[85px] bg-dark">
-        <Header metaData={metaData} allCourses={allCourses} bgDark />
+        <Header metaData={metaData} allCourses={allCourses} bgBlack />
       </div>
       <div className="relative fixed-container min-h-screen">
         <LessonSideBar switchShowSB={switchShowSB} showSideBar={showSideBar} course={course} />
         <div className={`customTransition ${showSideBar ? "md:ml-[350px]" : "md:ml-[69px]"}`}>
           <span
-            className={`inline-block md:hidden bg-blue-500 p-[4px] rounded-full cursor-pointer mt-[11px] ml-[11px] customTransition ${showSideBar && "rotate-180"}`}
+            className={`inline-block md:hidden bg-main p-[4px] rounded-full cursor-pointer mt-[11px] ml-[11px] customTransition ${showSideBar && "rotate-180"}`}
             onClick={switchShowSB}
           >
             <MdOutlineArrowBackIos className="text-[22px] text-white font-semibold" />
           </span>
           <div className="xl:mx-auto pb-[50px] px-[24.624px] sm:px-[49.248px] md:px-[54px] lg:px-[90px] pt-0 md:pt-[20px] max-w-[960px]">
             <h2 className="text-[30px] md:text-[40px] font-poppins font-semibold mb-[15px] md:mb-6">{lesson?.name}</h2>
-            <div className="flex space-x-2 mb-[18px] bg-[#f0f3f6] rounded-[6px] py-[9px] px-[18px] text-[13.5px] font-bold font-rubik text-blue-500">
+            <div className="flex space-x-2 mb-[18px] bg-[#f0f3f6] rounded-[6px] py-[9px] px-[18px] text-[13.5px] font-bold font-rubik text-main">
               <Link href={`/courses/${course?.slug}`}>
                 <a className="w-auto line-clamp-1 ">{course?.name}</a>
               </Link>

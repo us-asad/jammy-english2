@@ -16,6 +16,13 @@ module.exports = {
         "main": "#525FE1",
         "light": "#fff",
         "dark": "#000"
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            pre: null
+          },
+        },
       }
     },
   },

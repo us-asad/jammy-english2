@@ -146,3 +146,49 @@ export const getLessonAndCourse = async (courseSlug, lessonSlug) => {
 
   return result;
 }
+
+export const getPrivacyPolicy = async () => {
+  const query = `
+    query MyQuery() {
+      metaDatas(first: 1) {
+        facebookLink
+        developerName
+        developerLink
+        instagramLink
+        mainName
+        telegramLink
+        youtubeLink
+        privacyPolicy {
+          html
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphcmsAPI, query);
+
+  return result.metaDatas[0];
+}
+
+export const getTermsOfConditions = async () => {
+  const query = `
+    query MyQuery() {
+      metaDatas(first: 1) {
+        facebookLink
+        developerName
+        developerLink
+        instagramLink
+        mainName
+        telegramLink
+        youtubeLink
+        termsOfConditions {
+          html
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphcmsAPI, query);
+
+  return result.metaDatas[0];
+}
