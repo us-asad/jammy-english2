@@ -8,7 +8,7 @@ import { SEO } from "subcomponents";
 export default function Home({ topCourses, allCourses, metaData }) {
   return (
     <div className="">
-      <SEO title={`${metaData?.mainName} - Learn English with $0`} description={`${metaData?.mainName} for English Learners. It's fully free for everybody. Start courses now and change your life!`} />
+      <SEO title={`${metaData?.mainName} - Learn English Online For Free`} description={`${metaData?.mainName} | Free English Lessons and Teaching Resources`} />
       <Main metaData={metaData} allCourses={allCourses} />
       <About metaData={metaData} />
       <TopCourses topCourses={topCourses} />
