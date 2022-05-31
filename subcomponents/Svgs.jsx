@@ -26,4 +26,4 @@ export const Logo = props => (
       fill={props.fill === "normal" ? "#1d2d44" : "#fff"}
     />
   </svg>
-)
+);

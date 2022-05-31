@@ -6,8 +6,10 @@ import { Header } from "containers";
 import { DecorationImg } from "subcomponents";
 import humanImg from "public/human.png";
 import { shape1, shape2, shape3, arrow } from "assets";
+import * as a from "assets";
 
 export default function Main({ allCourses, metaData }) {
+  console.log(a);
   return (
     <div className="custom-banner text-dark relative">
       <Header dataAos="fade-down" allCourses={allCourses} metaData={metaData} />
@@ -52,7 +54,7 @@ export default function Main({ allCourses, metaData }) {
         </div>
       </div>
       <div>
-        <DecorationImg dataAos="fade-right" img={shape1} className="2xl:top-[231px] 2xl:left-[50px] top-[170px] left-[-10px]" />
+        <DecorationImg dataAos="fade-right" img={shape1} className="2xl:top-[231px] 2xl:left-[50px] top-[170px] left-[10px]" />
         <DecorationImg dataAos="fade-up" img={arrow} className="bottom-[20px] right-[50%]" />
         <DecorationImg dataAos="fade-up" img={shape2} className="top-[240px] right-[40%]" />
         <DecorationImg dataAos="fade-right" img={shape3} className="top-[250px] right-[90px]" />

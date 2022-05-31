@@ -2,7 +2,7 @@ import data from "data/main.json";
 import { TopCourseCard } from "components";
 import Carousel from "react-multi-carousel";
 import { DecorationImg } from "subcomponents";
-import { shape7, shape11 } from "assets";
+import { shape7, shape9, shape11 } from "assets";
 
 const responsive = {
   superLargeDesktop: {
@@ -43,7 +43,8 @@ export default function TopCourses({ topCourses }) {
       </div>
       <div>
         <DecorationImg dataAos="zoom-in" img={shape7} className="bottom-[30px] left-[20%]" />
-        <DecorationImg dataAos="zoom-in" img={shape11} className="top-[30px] left-32 animate-bounce" />
+        <DecorationImg dataAos="zoom-in" img={shape11} className="top-[30px] left-32" />
+        <DecorationImg dataAos="zoom-in" img={shape9} className="2xl:bottom-[30px] bottom-3 right-10" />
       </div>
     </section>
   );

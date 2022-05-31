@@ -1,5 +1,6 @@
 import data from "data/main.json";
 import contactData from "data/contact.json";
+import Link from "next/link";
 import { Logo, SocialIcon } from "subcomponents";
 
 const bottomTextClasses = "text-[12.768px] lg:text-[14px] font-rubik text-center word-spacing-3";
@@ -7,13 +8,22 @@ const bottomTextClasses = "text-[12.768px] lg:text-[14px] font-rubik text-center
 export default function Footer({ metaData }) {
   return (
     <footer className="bg-black text-white">
-      <div className="flex flex-col justify-center items-center py-5">
+      <div className="flex flex-col justify-center items-center pt-5 pb-[15px]">
         <Logo logo={metaData?.logo} metaData={metaData} fill="white" containerClassName="pr-[5px]" />
         <div className="flex space-x-4 md:space-x-5 justify-center mt-3">
           {metaData?.facebookLink && <SocialIcon link={metaData?.facebookLink} icon={{link: "/social/facebook.svg", alt: "facebook"}} size={25} blackWhite />}
           {metaData?.instagramLink && <SocialIcon link={metaData?.instagramLink} icon={{link: "/social/instagram.svg", alt: "instagram"}} size={25} blackWhite />}
           {metaData?.youtubeLink && <SocialIcon link={metaData?.youtubeLink} icon={{link: "/social/youtube.svg", alt: "youtube"}} size={25} blackWhite />}
           {metaData?.telegramLink && <SocialIcon link={metaData?.telegramLink} icon={{link: "/social/telegram.svg", alt: "telegram"}} size={25} blackWhite />}
+        </div>
+        <div className="space-x-3 text-[14px] pt-[9px]">
+          <Link href="/privacy-policy">
+            <a className="hover:underline">Privacy Policy</a>
+          </Link>
+          <span>•</span>
+          <Link href="/terms-of-conditions">
+            <a className="hover:underline">Terms of Conditions</a>
+          </Link>
         </div>
       </div>
       <div className="border-t-[1px] mx-[30px] lg:mx-0 border-[#ffffff66]">

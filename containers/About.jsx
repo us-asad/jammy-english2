@@ -1,8 +1,7 @@
 import data from "data/main.json";
 import { FaQuoteLeft } from "react-icons/fa";
 import { Video, DecorationImg } from "subcomponents";
-import { shape4, shape5, shape6, shape8 } from "assets";
-
+import { shape4, shape5, shape6, shape8, shape10 } from "assets";
 
 export default function About({ metaData }) {
   return (
@@ -30,8 +29,9 @@ export default function About({ metaData }) {
       </div>
       <div>
         <DecorationImg dataAos="zoom-in" img={shape5} className="top-[110px] left-32" />
-        <DecorationImg img={shape6} className="bottom-[110px] right-32 animate-spin" style={{animationDuration: "3s"}} />
+        <DecorationImg dataAos="zoom-in" img={shape6} className="bottom-[110px] right-32" />
         <DecorationImg dataAos="zoom-in" img={shape8} className="bottom-[210px] left-20" />
+        <DecorationImg dataAos="zoom-in" img={shape10} className="top-[50px] right-32" />
       </div>
     </section>
   );
