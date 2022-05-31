@@ -19,7 +19,7 @@ export default function Course({ allCourses, course, metaData }) {
 
   return (
     <div>
-      <SEO title={`${course?.name} Course By ${metaData.mainName}`} description={`${course?.name} Course. Learn for free at ${metaData.mainName}`} />
+      <SEO title={`${course?.name} Course by ${metaData.mainName}`} description={`${course?.name} Course. Learn for free at ${metaData.mainName}`} />
       <div
         className="bg-img-configs pt-[85px] -mb-3 px-6 sm:px-10 lg:pt-[125px] px-10 bg-fixed relative"
         style={{backgroundImage: `url(${course?.thumbnail?.url})`}}
