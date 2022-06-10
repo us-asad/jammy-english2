@@ -61,7 +61,7 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses, scrollY,
           </li>
         ))}
       </ul>
-      <ul className={`flex md:hidden justify-end flex-col justify-evenly text-[18px] mt-3 mx-2 ${!showNavbar ? "hidden" : ""}`}>
+      <ul className={`flex md:hidden flex-col justify-evenly text-[18px] mt-3 mx-2 ${!showNavbar ? "hidden" : ""}`}>
         {data.nav_items.map(item => (
           <li
             key={item.slug}

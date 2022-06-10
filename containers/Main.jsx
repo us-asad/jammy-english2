@@ -43,6 +43,7 @@ export default function Main({ allCourses, metaData }) {
           <div className="relative mb-[-5px] !bg-contain !bg-no-repeat !bg-center" style={{background: "url(/human-bg.png)"}}>
             <Image
               src={humanImg}
+              placeholder="blur"
               alt="English Learner"
               width={humanImg.width}
               height={humanImg.height}
