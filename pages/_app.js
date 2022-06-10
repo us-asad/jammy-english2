@@ -30,10 +30,11 @@ function App({ Component, pageProps }) {
   return (
     <main className="overflow-x-hidden min-w-screen min-h-screen selection:bg-main selection:text-white">
       <Script
+        id="analytics-1"
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
       />
-      <Script strategy="lazyOnload">
+      <Script id="analytics-2" strategy="lazyOnload">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
