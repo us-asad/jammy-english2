@@ -24,7 +24,7 @@ export default function LessonSideBar({ switchShowSB, showSideBar, course }) {
       >
       {course?.lessons?.map((lesson, i) => (
         <Link key={i} href={`/${course?.slug}/lessons/${lesson?.slug}`}>
-          <a className={`flex items-center space-x-2 overflow-hidden p-[18px] block border-b border-b-[#e2e7ed] text-[15.75px] font-rubik customTransition hover:text-main ${router?.query?.lessonSlug === lesson?.slug && "text-main pointer-events-none"}`}>
+          <a className={`flex items-center space-x-2 overflow-hidden p-[18px] border-b border-b-[#e2e7ed] text-[15.75px] font-rubik customTransition hover:text-main ${router?.query?.lessonSlug === lesson?.slug && "text-main pointer-events-none"}`}>
             <MdPlayLesson />
             <span className="line-clamp-1">{lesson?.name}</span>
           </a>
