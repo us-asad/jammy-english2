@@ -38,10 +38,12 @@ export default function ContactDetails({ metaData }) {
         {data.social_icons_title}
       </h4>
       <div className="flex space-x-4 md:space-x-3 justify-center md:justify-start">
-        {metaData?.facebookLink && <SocialIcon dataAos="zoom-in" link={metaData?.facebookLink} icon={{link: "/social/facebook.svg", alt: "facebook"}} size={45} />}
-        {metaData?.instagramLink && <SocialIcon dataAos="zoom-in" link={metaData?.instagramLink} icon={{link: "/social/instagram.svg", alt: "instagram"}} size={45} />}
         {metaData?.youtubeLink && <SocialIcon dataAos="zoom-in" link={metaData?.youtubeLink} icon={{link: "/social/youtube.svg", alt: "youtube"}} size={45} />}
+        {metaData?.instagramLink && <SocialIcon dataAos="zoom-in" link={metaData?.instagramLink} icon={{link: "/social/instagram.svg", alt: "instagram"}} size={45} />}
         {metaData?.telegramLink && <SocialIcon dataAos="zoom-in" link={metaData?.telegramLink} icon={{link: "/social/telegram.svg", alt: "telegram"}} size={45} />}
+        {metaData?.telegramLink && <SocialIcon dataAos="zoom-in" link={metaData?.tiktokLink} icon={{link: "/social/tiktok.svg", alt: "tiktok"}} size={45} />}
+        {metaData?.telegramLink && <SocialIcon dataAos="zoom-in" link={metaData?.pinterestLink} icon={{link: "/social/pinterest.svg", alt: "pinterest"}} size={45} />}
+        {metaData?.facebookLink && <SocialIcon dataAos="zoom-in" link={metaData?.facebookLink} icon={{link: "/social/facebook.svg", alt: "facebook"}} size={45} />}
       </div>
     </div>
   );

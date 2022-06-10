@@ -3,6 +3,8 @@ import Image from "next/image";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTelegram } from "react-icons/bs";
+import { SiTiktok } from "react-icons/si";
+import { GrPinterest } from "react-icons/gr";
 
 const iconClassNames = "text-lg";
 
@@ -24,6 +26,10 @@ export default function SocialIcon({ link, icon, size, blackWhite, dataAos }) {
         ? <FaYoutube className={iconClassNames} />
         : name === "telegram"
         ? <BsTelegram className={iconClassNames} />
+        : name === "pinterest"
+        ? <GrPinterest className={iconClassNames} />
+        : name === "tiktok"
+        ? <SiTiktok className={iconClassNames} />
         : name === "instagram"
         ? <AiFillInstagram className={iconClassNames} />
         : ""

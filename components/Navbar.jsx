@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import data from "data/main.json";
@@ -6,10 +6,11 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 export default function Navbar({ showNavbar, setShowNavbar, allCourses, scrollY, bgDark }) {
   const [showDropDown, setShowDropDown] = useState(false);
+  const dropdownRef = useRef();
   const router = useRouter();
 
   const switchShowDD = v => () => setShowDropDown(v);
-  
+
   return (
     <nav className={`w-full custom-non-desktop-responsive-banner md:bg-transparent mt-5 md:mt-0 ${showNavbar && "text-black"}`}>
       <ul className="hidden md:flex justify-end">
@@ -31,6 +32,7 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses, scrollY,
                 />
                 <ol
                   className={`absolute z-20 left-[-28px] border-[1px] border-[#ddd] text-center bg-white text-black px-8 py-5 rounded-sm customTransition ${showDropDown ? "pointer-events-auto opacity-1 top-[42px]" : "pointer-events-none opacity-0 top-[48px]"}`}
+                  ref={dropdownRef}
                   onMouseEnter={switchShowDD(true)}
                   onMouseLeave={switchShowDD(false)}
                 >
@@ -40,7 +42,10 @@ export default function Navbar({ showNavbar, setShowNavbar, allCourses, scrollY,
                       key={course?.slug}
                       className={`px-1 py-[6px] w-max hover:text-blue-400 transition duration-200 ${!course.isReady ? "text-gray-300 pointer-events-none select-none relative" : "hover:text-blue-400"}`}
                     >
-                      {!course?.isReady && <span className="absolute text-[11px] -top-1.5 right-0 font-semibold text-amber-400 w-max">coming soon</span>}
+                      {!course?.isReady && <span
+                        className="absolute text-[11px] -top-1.5 right-0 font-semibold text-amber-400 -left-[76px] text-right"
+                        style={{width: dropdownRef.current?.offsetWidth + "px"}}
+                      >coming soon</span>}
                       <Link href={`${item.slug}/${course?.slug}`}>
                         <a>{course?.name}</a>
                       </Link>

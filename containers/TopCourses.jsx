@@ -27,7 +27,7 @@ export default function TopCourses({ topCourses }) {
   return (
     <section id="top-courses" className="section-banner relative">
       <div className="xl:container xl:mx-auto pt-[130px] lg:pt-40 dots-bg relative z-10">
-        <p data-aos="fade-right" className="absolute top-[60px] lg:top-[90px] left-[50px] xl:left-auto text-[20px] font-rubik font-medium after:w-[70%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">{data.top_courses.title}</p>
+        <p data-aos="fade-right" className="absolute top-[60px] lg:top-[90px] left-[50px] xl:left-auto text-[20px] lg:ml-5 font-rubik font-medium after:w-[70%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">{data.top_courses.title}</p>
         <div className="relative customCarouselForRecentPosts">
           <Carousel
             infinite

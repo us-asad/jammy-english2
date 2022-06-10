@@ -51,6 +51,8 @@ export const getTopCourses = async () => {
         secondButtonName
         subtitle
         telegramLink
+        pinterestLink
+        tiktokLink
         title
         youtubeLink
         video {
@@ -93,6 +95,8 @@ export const getCourse = async slug => {
         mainName
         telegramLink
         youtubeLink
+        pinterestLink
+        tiktokLink
       }
     }
   `;
@@ -138,6 +142,8 @@ export const getLessonAndCourse = async (courseSlug, lessonSlug) => {
         mainName
         telegramLink
         youtubeLink
+        pinterestLink
+        tiktokLink
       }
     }
   `;
@@ -181,6 +187,8 @@ export const getTermsOfConditions = async () => {
         mainName
         telegramLink
         youtubeLink
+        pinterestLink
+        tiktokLink
         termsOfConditions {
           html
         }

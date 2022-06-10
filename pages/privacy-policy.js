@@ -10,7 +10,7 @@ export default function PrivacyPolicy({allCourses, metaData}) {
       <div className="h-[85px] bg-dark">
         <Header metaData={metaData} allCourses={allCourses} bgBlack />
       </div>
-      <div className="!container mx-auto prose prose-p:font-rubik my-7 min-h-screen">
+      <div className="!container mx-auto px-5 prose prose-p:font-rubik my-7 min-h-screen">
         {parser(metaData?.privacyPolicy?.html)}
       </div>
       <Footer metaData={metaData} />
