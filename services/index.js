@@ -1,7 +1,7 @@
 import { request, gql } from "graphql-request";
 
 const graphcmsAPI = process.env.NEXT_PUBLIC_GRAPHCMS_API;
-
+ 
 export const getAllCourses = async () => {
   const query = gql`
     query MyQuery {
