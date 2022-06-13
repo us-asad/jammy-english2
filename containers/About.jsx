@@ -28,10 +28,10 @@ export default function About({ metaData }) {
         </div>
       </div>
       <div>
-        <DecorationImg dataAos="zoom-in" img={shape5} className="top-[110px] left-32" />
-        <DecorationImg dataAos="zoom-in" img={shape6} className="bottom-[110px] right-32" />
-        <DecorationImg dataAos="zoom-in" img={shape8} className="bottom-[210px] left-20" />
-        <DecorationImg dataAos="zoom-in" img={shape10} className="top-[50px] right-32" />
+        <DecorationImg dataAos="zoom-in" img={shape5} className="top-[110px] left-32 !opacity-50" />
+        <DecorationImg dataAos="zoom-in" img={shape6} className="bottom-[50px] right-20 !opacity-80" />
+        <DecorationImg dataAos="zoom-in" img={shape8} className="bottom-[210px] left-20 !opacity-70" />
+        <DecorationImg dataAos="zoom-in" img={shape10} className="top-[50px] right-32 !opacity-70" />
       </div>
     </section>
   );

@@ -43,7 +43,7 @@ export default function TopCourses({ topCourses }) {
       </div>
       <div>
         <DecorationImg dataAos="zoom-in" img={shape7} className="bottom-[30px] left-[20%]" />
-        <DecorationImg dataAos="zoom-in" img={shape11} className="top-[30px] left-32" />
+        <DecorationImg dataAos="zoom-in" img={shape11} className="top-[30px] left-32 !opacity-50" />
         <DecorationImg dataAos="zoom-in" img={shape9} className="2xl:bottom-[30px] bottom-3 right-10" />
       </div>
     </section>

@@ -80,6 +80,30 @@ body {
 
 
 
+/* ANIMATION */
+@keyframes main {
+  0% {
+    transform: translate(0px, 0px) rotate(45deg);
+  }
+  25% {
+    transform: translate(103px, 0px);
+  }
+  50% {
+    transform: translate(103px, -41px) rotate(45deg);
+  }
+  75% {
+    transform: translate(0px, -41px);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(45deg);
+  }
+}
+
+.animate-main {
+  animation: main 4s ease-in infinite;
+}
+
+
 /* CUSTOM TRANSITION  */
 .customTransition, .responsive-transition {
   -webkit-transition: all .3s;

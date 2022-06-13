@@ -52,7 +52,7 @@ export default function Main({ allCourses, metaData }) {
         </div>
       </div>
       <div>
-        <DecorationImg dataAos="fade-right" img={shape1} className="2xl:top-[231px] 2xl:left-[50px] top-[170px] left-[10px]" />
+        <DecorationImg dataAos="fade-right" img={shape1} className="top-[93px] left-[36px] !opacity-30 animate-main" />
         <DecorationImg dataAos="fade-up" img={arrow} className="bottom-[20px] right-[50%]" />
         <DecorationImg dataAos="fade-up" img={shape2} className="top-[240px] right-[40%]" />
         <DecorationImg dataAos="fade-right" img={shape3} className="top-[250px] right-[90px]" />
