@@ -17,7 +17,7 @@ export default function SocialIcon({ link, icon, size, blackWhite, dataAos }) {
       href={link}
       rel="noreferrer"
       target="_blank"
-      className={`${!blackWhite ? "hover:scale-105" : "hover:rotate-[360deg] duration-600"} hover:drop-shadow-lg focus:scale-95 customTransition`}
+      className={`${!blackWhite ? "hover:scale-105" : "hover:rotate-[360deg] duration-600"} hover:drop-shadow-lg focus:scale-95 customTransition flex`}
     >
       {blackWhite ? (
         name === "facebook"
@@ -37,8 +37,8 @@ export default function SocialIcon({ link, icon, size, blackWhite, dataAos }) {
         <Image
           src={icon.link}
           alt={name}
-          width={size}
-          height={size}
+          width={name === "tiktok" ? 40 : size}
+          height={name === "tiktok" ? 40 : size}
         />
       )}
     </a>

@@ -37,13 +37,13 @@ export default function TopCourses({ topCourses }) {
             className="pb-20"
             itemClass="px-7"
           >
-            {topCourses?.slice(0, 3).map(course => <TopCourseCard key={course?.slug} dataAos="zoom-in" metaData={`${course?.lessons?.length} lessons`} mainSlug="courses" btnName="Start Course" isCourse {...course} />)}
+            {topCourses?.slice(0, 3).map(course => <TopCourseCard key={course?.slug} dataAos="zoom-in" metaData={`${course?.lessons?.length} lesson${course?.lessons?.length > 1 ? "s" : ""}`} mainSlug="courses" btnName="Start Course" isCourse {...course} />)}
           </Carousel>
         </div>
       </div>
       <div>
         <DecorationImg dataAos="zoom-in" img={shape7} className="bottom-[30px] left-[20%]" />
-        <DecorationImg dataAos="zoom-in" img={shape11} className="top-[30px] left-32 !opacity-50" />
+        <DecorationImg dataAos="zoom-in" img={shape11} className="top-[30px] left-32 !opacity-50 animate-main" />
       </div>
     </section>
   );

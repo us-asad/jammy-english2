@@ -3,51 +3,48 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* FONTS */
 @font-face {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/Poppins-Bold.ttf');
+  src: url("/fonts/Poppins-Bold.ttf");
 }
 
 @font-face {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  src: url('/fonts/Poppins-SemiBold.ttf');
+  src: url("/fonts/Poppins-SemiBold.ttf");
 }
 
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 700;
-  src: url('/fonts/Rubik-Bold.ttf');
+  src: url("/fonts/Rubik-Bold.ttf");
 }
 
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 600;
-  src: url('/fonts/Rubik-SemiBold.ttf');
+  src: url("/fonts/Rubik-SemiBold.ttf");
 }
 
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/Rubik-Medium.ttf');
+  src: url("/fonts/Rubik-Medium.ttf");
 }
 
 @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/Rubik-Regular.ttf');
+  src: url("/fonts/Rubik-Regular.ttf");
 }
-
-
 
 /* SCROLLBAR */
 *::-webkit-scrollbar {
@@ -55,19 +52,17 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #525fe130; 
+  background: #525fe130;
 }
- 
+
 *::-webkit-scrollbar-thumb {
-  background: #525FE1;
-  border-radius: 3px; 
+  background: #525fe1;
+  border-radius: 3px;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #525fe1c9; 
+  background: #525fe1c9;
 }
-
-
 
 /* MAIN STYLES */
 html {
@@ -78,24 +73,16 @@ body {
   overflow-x: hidden;
 }
 
-
-
 /* ANIMATION */
 @keyframes main {
   0% {
-    transform: translate(0px, 0px) rotate(45deg);
-  }
-  25% {
-    transform: translate(103px, 0px);
+    transform: translate(0) rotate(45deg);
   }
   50% {
-    transform: translate(103px, -41px) rotate(45deg);
-  }
-  75% {
-    transform: translate(0px, -41px);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(0px, 0px) rotate(45deg);
+    transform: translate(0) rotate(45deg);
   }
 }
 
@@ -103,42 +90,45 @@ body {
   animation: main 4s ease-in infinite;
 }
 
-
 /* CUSTOM TRANSITION  */
-.customTransition, .responsive-transition {
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+.customTransition,
+.responsive-transition {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
-
 
 /* UNDERLINE */
-.link-underline, .link-underline-black, .link-underline-dark {
+.link-underline,
+.link-underline-black,
+.link-underline-dark {
   border-bottom-width: 0;
   background-repeat: no-repeat;
-  transition: background-size .5s ease-in-out;
+  transition: background-size 0.5s ease-in-out;
 }
 
-.link-underline, .link-underline-dark {
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+.link-underline,
+.link-underline-dark {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
   background-size: 0 2px;
   background-position: 0 100%;
 }
 
 .link-underline-dark {
-  background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000);
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#000, #000);
 }
 
-.link-underline:hover, .link-underline-dark:hover {
+.link-underline:hover,
+.link-underline-dark:hover {
   background-size: 100% 2px;
 }
 
-
-
 /* BACKGROUND IMAGE */
-.custom-banner, .custom-non-desktop-responsive-banner {
+.custom-banner,
+.custom-non-desktop-responsive-banner {
   background-image: url("/main-bg.jpg");
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -164,8 +154,6 @@ body {
   background-size: cover;
 }
 
-
-
 /* FONTS  */
 .font-rubik {
   font-family: "Rubik", sans-serif;
@@ -179,13 +167,10 @@ body {
   font-family: cursive;
 }
 
-
-
 /* FIXED CONTAINER */
 .fixed-container {
   -webkit-transform: translate3d(0, 0, 0);
 }
-
 
 /* REACT-MULTI-CAROUSEL */
 .customCarouselForRecentPosts .react-multi-carousel-item {
@@ -193,12 +178,10 @@ body {
   justify-content: center !important;
 }
 
-
 /* DROP SHADOW */
 .drop-shadow-25 {
   filter: drop-shadow(0 25px 25px rgb(0 0 0 / 29%));
 }
-
 
 /* LINE CLAMP  */
 .line-clamp-1 {
@@ -208,14 +191,10 @@ body {
   -webkit-box-orient: vertical;
 }
 
-
-
 /* BOX-SHADOW  */
 .contact_shadow {
   box-shadow: 0px -20px 20px -23px rgb(2 2 2 / 26%);
 }
-
-
 
 /* WORD SPACING  */
 .word-spacing-3 {
@@ -226,24 +205,22 @@ body {
 .iframe-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; 
+  padding-bottom: 56.25%;
   height: 0;
 }
 
-.iframe-container iframe{
+.iframe-container iframe {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
 
-
 /* SCROLL TO TOP */
 .styles_scroll-to-top__2A70v svg {
   margin: auto;
 }
-
 
 /* RESPONSIVE  */
 @media (max-width: 350px) {
@@ -266,10 +243,10 @@ body {
   }
 
   .responsive-transition {
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
 
   .custom-non-desktop-responsive-banner {
