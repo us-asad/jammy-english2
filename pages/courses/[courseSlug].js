@@ -33,9 +33,9 @@ export default function Course({ allCourses, course, metaData }) {
             dataAos="fade-up"
             videoId={course?.youtubeVideoId}
             className="sm:w-[550px] sm:h-[320px] md:w-[650px] md:h-[350px] lg:w-[750px] xl:w-[850px] lg:h-[400px] rounded-[19px] top-[62px] sm:top-[90px] lg:top-[105px] absolute"
-            ref={videoRef}
+            ref={videoRef} 
           />
-        </div>
+        </div> 
       </div>
       <div className="section-banner mt-[10px]">
         <div className="container dots-bg courses-dots-bg mx-auto px-10 pt-[100px] pb-10 flex flex-wrap justify-around space-y-10 space-x-2 relative">
