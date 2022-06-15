@@ -18,7 +18,7 @@ export default function TermsOfConditions({allCourses, metaData}) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const allCourses = await getAllCourses();
   const metaData = await getTermsOfConditions();
 
