@@ -39,7 +39,7 @@ export default function Course({ allCourses, course, metaData }) {
       </div>
       <div className="section-banner mt-[10px]">
         <div className="container dots-bg courses-dots-bg mx-auto px-10 pt-[100px] pb-10 flex flex-wrap justify-around space-y-10 space-x-2 relative">
-          <h4 data-aos="fade-left" style={{wordSpacing: "6px"}} className="absolute font-rubik top-[60px] lg:top-[80px] left-[50%] translate-x-[-50%] md:translate-x-0 md:left-[73px] text-[20px] font-rubik font-medium after:w-[82%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">
+          <h4 data-aos="fade-left" style={{wordSpacing: "6px"}} className="absolute font-rubik top-[60px] lg:top-[80px] left-[10%] translate-x-[-50%] md:translate-x-0 md:left-[73px] text-[20px] font-rubik font-medium after:w-[82%] after:h-[1px] after:absolute after:-bottom-1 after:left-0 after:bg-black">
             {course?.lessons?.length} lesson{course?.lessons?.length > 1 ? "s" : ""}
           </h4>
           {course?.lessons?.map(lesson => (
