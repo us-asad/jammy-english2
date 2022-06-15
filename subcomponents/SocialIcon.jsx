@@ -1,5 +1,3 @@
-import data from "data/contact.json";
-import Image from "next/image";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTelegram } from "react-icons/bs";
@@ -34,7 +32,7 @@ export default function SocialIcon({ link, icon, size, blackWhite, dataAos }) {
         ? <AiFillInstagram className={iconClassNames} />
         : ""
       ) : (
-        <Image
+        <img
           src={icon.link}
           alt={name}
           width={name === "tiktok" ? 40 : size}

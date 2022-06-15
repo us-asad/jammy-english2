@@ -1,7 +1,4 @@
 import { getTopCourses, getAllCourses } from "services";
-import data from "data/main.json";
-import Head from "next/head";
-import Link from "next/link";
 import { Main, About, TopCourses, Contact, Footer } from "containers";
 import { SEO } from "subcomponents";
 
