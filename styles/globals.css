@@ -64,6 +64,10 @@
   background: #525fe1c9;
 }
 
+*:focus {
+  outline: 0;
+}
+
 /* MAIN STYLES */
 html {
   scroll-behavior: smooth;

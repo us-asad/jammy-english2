@@ -40,8 +40,8 @@ export default function Video({ video }) {
         {!playVideo && <span className="animate-ping absolute z-10 left-[7px] md:left-[8px] text-0 md:text-[38px] text-white customTransition w-[35px] h-[35px] md:w-[50px] md:h-[50px] bg-main rounded-full"></span>}
 
           {playVideo
-            ? <BsPauseFill />
-            : <BsFillPlayFill />
+            ? <BsPauseFill className="absolute z-[11]" />
+            : <BsFillPlayFill className="absolute z-[11]" />
           }
         </button>
       </div>
