@@ -1,9 +1,9 @@
-import { Image } from "next/image";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTelegram } from "react-icons/bs";
 import { SiTiktok } from "react-icons/si";
 import { GrPinterest } from "react-icons/gr";
+import Image from "next/image";
 
 const iconClassNames = "text-lg";
 
@@ -36,8 +36,8 @@ export default function SocialIcon({ link, icon, size, blackWhite, dataAos }) {
         <Image
           src={icon.link}
           alt={name}
-          width={name === "tiktok" ? 41 : size}
-          height={name === "tiktok" ? 41 : size}
+          width={name === "tiktok" ? 40 : size}
+          height={name === "tiktok" ? 40 : size}
         />
       )}
     </a>
