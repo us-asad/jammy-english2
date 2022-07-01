@@ -14,6 +14,7 @@ export default function TopCoursesCard({ thumbnail, name, metaData, slug, mainSl
           width="360"
           height="240"
           className="rounded-[16px]"
+          objectFit="cover"
         />
       </div>
       <div className="px-10 pt-6 pb-8">
