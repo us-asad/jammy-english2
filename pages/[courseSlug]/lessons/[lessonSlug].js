@@ -52,20 +52,14 @@ export default function Lesson({ allCourses, lesson, course, metaDatas }) {
             </div>
             <div className="border-t-2 border-b-[#e2e7ed]">
               <div className="flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 text-center pt-3 pb-5">
-                <Link href={lesson?.pdfForStudents?.url}>
-                  <a
-                    rel="noreferrer"
-                    target="_blank"
-                    className="p-3 bg-main rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-indigo-500"
-                  >{metaData?.downloadForStudentsText}</a>
-                </Link>
-                <Link href={lesson?.pdfForTeachers?.url}>
-                  <a
-                    rel="noreferrer"
-                    target="_blank"
-                    className="p-3 bg-main rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-indigo-500"
-                  >{metaData?.downloadForTeachersText}</a>
-                </Link>
+                <a
+                  href={`${lesson?.pdfForStudents?.url}?dl=`}
+                  className="p-3 bg-main rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-indigo-500"
+                >{metaData?.downloadForStudentsText}</a>
+                <a
+                  href={`${lesson?.pdfForTeachers?.url}?dl=`}
+                  className="p-3 bg-main rounded-lg text-[13px] md:text-[13.5px] text-white font-rubik font-medium customTransition hover:bg-indigo-500"
+                >{metaData?.downloadForTeachersText}</a>
               </div>
               <div className="flex justify-between">
                 <Link href={`/${course?.slug}/lessons/${course?.lessons?.length && course.lessons[lessonIdx - 1]?.slug}`}>
